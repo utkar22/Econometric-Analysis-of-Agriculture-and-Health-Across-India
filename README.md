@@ -2,6 +2,10 @@ An Econometric Analysis of various health indicators on diseases across all dist
 
 This analysis was carried out through the Assignments 1, 2 and the Project of the Econometrics-1 course taken during my fourth semester, in the months of March and April of 2022.
 
+# Dataset
+
+A dataset containing information on agricultural yield data alongside different health indicators for different districts across 6 years (2011-2016)
+
 # Data Preprocessing
 
 A csv file containing most of the data was provided by the course instructor. We then had to create datasets for gdp, beds and tap using data from the internet from the links that were provided. Then we have added this data to the appended columns in the larger dataset.
