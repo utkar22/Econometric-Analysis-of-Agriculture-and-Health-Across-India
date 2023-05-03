@@ -26,3 +26,18 @@ To ensure that our analysis was robust, we performed data cleaning. Our analysis
 In any of the rows where data for any of the 10 variables (dependent and independent) was missing, we removed that row. This was to ensure that our vectors when conducting analysis did not have NULL values and were of equal sizes. In other variables where we had missing data, we replaced the missing values with NA.
 
 The input dataset used for our analysis was named main.csv, while the appended and cleaned dataset was named main9.csv.
+
+
+# Preliminary Analysis
+In this section, we provide an overview of the preliminary analysis conducted on the dataset. The analysis was divided into three parts, and involved exploratory data analysis, regression modelling, and correlation analysis.
+
+## Exploratory Data Analysis
+The first part of the analysis involved exploring the distribution of the variables in the dataset. We created histograms for each variable to understand their distribution and range. We also conducted a simple statistical summary to get an idea of the mean, standard deviation, and other descriptive statistics for each variable.
+
+## Regression Modelling
+The second part of the analysis involved experimenting with different regression models to identify the best predictors of the health indicators. We used a variety of explanatory variables, including yield index of different crop categories, level-level vs level-log models, and more. We noticed that yield indexes of some different crop categories have an opposing effect on the health indicator, which is missed out when we include the yield index for all six crop categories together. This highlights the importance of precision over generality in our analysis.
+
+## Correlation Analysis
+In the third part of the analysis, we conducted a correlation analysis between yield growth and health indicators across different crop categories. We found that the relationship between yield growth and health indicators is not similar across crop categories. For example, sepsis has a negative correlation with yield growth across all crop categories, whereas lbw has a negative correlation with yield growth rate of cash crops, but a positive correlation with yield growth rates across other crop categories. Pneumonia, on the other hand, has a positive correlation with yield growth rate of cash, but a negative correlation with yield growth rates across other crop categories. We also observed that the theoretical relation between the coefficient of correlation and the goodness of fit holds in the given data.
+
+Overall, the preliminary analysis provides a good starting point for our analysis of the relationship between agriculture and health indicators. By exploring the distribution of variables, experimenting with regression models, and conducting a correlation analysis, we have gained valuable insights into the dataset, which will inform our subsequent analysis.
