@@ -3,6 +3,7 @@
 This project presents an econometric analysis of various health indicators on diseases across all districts in India, performed using R programming language. The analysis was carried out as part of the Econometrics-1 course offered during the fourth semester, in March and April of 2022. The aim of this analysis was to examine the relationship between different health indicators and diseases across various districts in India, using the cleaned and preprocessed dataset obtained by appending external data for GDP, hospital beds, and tap water availability to the main dataset. The findings of this analysis are expected to provide insights into the state of healthcare and the impact of various health indicators on diseases in different districts of India, which may inform policy decisions aimed at improving healthcare outcomes.
 
 Members:
+
 Utkarsh Arora
 
 Keshav Rajput
@@ -13,10 +14,10 @@ Samarth Raina
 
 Sejal Kardam
 
-# Dataset
+## Dataset
 The dataset used in this project contains information on agricultural yield data alongside different health indicators for different districts across six years (2011-2016) in India. The dataset was provided to us by the course instructor in the form of a CSV file.
 
-# Data Preprocessing
+## Data Preprocessing
 As part of the data preprocessing step, we created datasets for GDP, hospital beds, and tap water using data obtained from the internet. We then added this data to the appended columns in the larger dataset.
 
 In addition, we found data on child marriage rates across various states of India and the content of nitate in the water supply. We included these additional datasets in our analysis.
@@ -28,24 +29,55 @@ In any of the rows where data for any of the 10 variables (dependent and indepen
 The input dataset used for our analysis was named main.csv, while the appended and cleaned dataset was named main9.csv.
 
 
-# Preliminary Analysis
+## Preliminary Analysis
 In this section, we provide an overview of the preliminary analysis conducted on the dataset. The analysis was divided into three parts, and involved exploratory data analysis, regression modelling, and correlation analysis.
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 The first part of the analysis involved exploring the distribution of the variables in the dataset. We created histograms for each variable to understand their distribution and range. We also conducted a simple statistical summary to get an idea of the mean, standard deviation, and other descriptive statistics for each variable.
 
-## Regression Modelling
+### Regression Modelling
 The second part of the analysis involved experimenting with different regression models to identify the best predictors of the health indicators. We used a variety of explanatory variables, including yield index of different crop categories, level-level vs level-log models, and more. We noticed that yield indexes of some different crop categories have an opposing effect on the health indicator, which is missed out when we include the yield index for all six crop categories together. This highlights the importance of precision over generality in our analysis.
 
-## Correlation Analysis
+### Correlation Analysis
 In the third part of the analysis, we conducted a correlation analysis between yield growth and health indicators across different crop categories. We found that the relationship between yield growth and health indicators is not similar across crop categories. For example, sepsis has a negative correlation with yield growth across all crop categories, whereas lbw has a negative correlation with yield growth rate of cash crops, but a positive correlation with yield growth rates across other crop categories. Pneumonia, on the other hand, has a positive correlation with yield growth rate of cash, but a negative correlation with yield growth rates across other crop categories. We also observed that the theoretical relation between the coefficient of correlation and the goodness of fit holds in the given data.
 
 Overall, the preliminary analysis provides a good starting point for our analysis of the relationship between agriculture and health indicators. By exploring the distribution of variables, experimenting with regression models, and conducting a correlation analysis, we have gained valuable insights into the dataset, which will inform our subsequent analysis.
 
+## Variables
 
-# Conclusion
+The following variables were used in the model:
 
-Conclusion:
+### Health and Birth Indicators
+
+- `v42`: Percentage of infant deaths due to Low Birth Weight (LBW) (to total reported infant deaths)
+- `v12`: Percentage of women discharged in less than 48 hours of delivery (to total reported deliveries in public institutions)
+- `v15`: Percentage of institutional deliveries (to total reported deliveries)
+- `v16`: Percentage of safe deliveries (to total reported deliveries)
+- `v25`: Percentage of reported live births (to reported births)
+- `v28`: Percentage of newborns having weight less than 2.5 kg (to newborns weighed at birth)
+- `female_pct`: Percentage of female births to total births
+- `nitrate`: Measure of quality of water, indicates the presence of nitrate in water supply in standard units.
+
+### Environmental and Economic Indicators
+
+- `log10(gdp)`: Log of GDP of states
+- `log10(beds)`: Log of number of hospital beds by states
+- `log10(taps)`: Log of number of taps with water access district wise
+- `cash_index`: Yield Index of the cash crops grown at a particular district at a particular time
+- `cereal_index`: Yield Index of the cereal crops grown in a particular district at a particular time
+- `child_marriage`: Number of child marriage cases reported state-wise at a particular time.
+
+### Choice of Variables
+
+The variables were chosen based on intuition and empirical data found on the internet. For example, child marriage was chosen as it increases the risk of premature birth which is the single biggest cause of low birth weight. Nitrate was included to consider environmental factors that could possibly affect the mother's health. The variables `v12`, `v15`, `v16`, `v25`, and `v28` were chosen based on intuitive reasoning. The cereal index was included as it can affect the nutrition of the mother, which is likely to affect the health of the child.
+
+### Function of Variables
+
+Most of the variables are linear, but `log10(gdp)`, `log10(beds)`, and `log10(taps)` were taken as their values are very large. Also, `log(x)` is a monotonic function so it will not affect the overall trend, i.e., slope sign. The log values for `gdp`, `beds`, and `taps` were taken to reduce the high magnitudes of values within the sample to comparable values.
+
+
+
+## Conclusion
 
 This project analyzed the percentage of infant deaths due to low birth weight (LBW) in relation to various factors. The model considered both kharif and rabi crops separately, and the regression results showed that the variables had varying levels of significance in determining the percentage of infant deaths due to LBW.
 
