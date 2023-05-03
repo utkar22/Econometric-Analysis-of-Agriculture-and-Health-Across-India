@@ -4,9 +4,13 @@ This project presents an econometric analysis of various health indicators on di
 
 Members:
 Utkarsh Arora
+
 Keshav Rajput
+
 Krishnasai Addala
+
 Samarth Raina
+
 Sejal Kardam
 
 # Dataset
