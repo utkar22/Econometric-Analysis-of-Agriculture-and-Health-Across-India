@@ -56,16 +56,21 @@ The following variables were used in the model:
 - `v25`: Percentage of reported live births (to reported births)
 - `v28`: Percentage of newborns having weight less than 2.5 kg (to newborns weighed at birth)
 - `female_pct`: Percentage of female births to total births
-- `nitrate`: Measure of quality of water, indicates the presence of nitrate in water supply in standard units.
+- `child_marriage`: Number of child marriage cases reported state-wise at a particular time.
 
-### Environmental and Economic Indicators
+
+### Economic Indicators
 
 - `log10(gdp)`: Log of GDP of states
 - `log10(beds)`: Log of number of hospital beds by states
 - `log10(taps)`: Log of number of taps with water access district wise
+
+### Agricultural Indicators
 - `cash_index`: Yield Index of the cash crops grown at a particular district at a particular time
 - `cereal_index`: Yield Index of the cereal crops grown in a particular district at a particular time
-- `child_marriage`: Number of child marriage cases reported state-wise at a particular time.
+
+### Environmental Indicators
+- `nitrate`: Measure of quality of water, indicates the presence of nitrate in water supply in standard units.
 
 ### Choice of Variables
 
