@@ -81,6 +81,13 @@ The variables were chosen based on intuition and empirical data found on the int
 Most of the variables are linear, but `log10(gdp)`, `log10(beds)`, and `log10(taps)` were taken as their values are very large. Also, `log(x)` is a monotonic function so it will not affect the overall trend, i.e., slope sign. The log values for `gdp`, `beds`, and `taps` were taken to reduce the high magnitudes of values within the sample to comparable values.
 
 
+## Model Description
+The model equation is as follows:
+
+`V42` = Intercept + `v12`kr + `v15`kr + `v16`kr + `v25`kr + `v28`kr + `female_pct`kr + log(`beds`kr) + log(`tap`kr) + log(`gdp`kr) + `cash_index`kr + `cereal_index`kr + `child_marriage`kr + `nitrate`kr + error
+
+Here, k/r denotes that the variable is different for rabi and kharif. The model uses an intercept and considers various independent variables to predict the dependent variable V42. The model also takes into account the error term to account for any variance that cannot be explained by the included independent variables.
+
 
 ## Conclusion
 
