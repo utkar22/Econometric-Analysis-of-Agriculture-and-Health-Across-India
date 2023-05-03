@@ -41,3 +41,16 @@ The second part of the analysis involved experimenting with different regression
 In the third part of the analysis, we conducted a correlation analysis between yield growth and health indicators across different crop categories. We found that the relationship between yield growth and health indicators is not similar across crop categories. For example, sepsis has a negative correlation with yield growth across all crop categories, whereas lbw has a negative correlation with yield growth rate of cash crops, but a positive correlation with yield growth rates across other crop categories. Pneumonia, on the other hand, has a positive correlation with yield growth rate of cash, but a negative correlation with yield growth rates across other crop categories. We also observed that the theoretical relation between the coefficient of correlation and the goodness of fit holds in the given data.
 
 Overall, the preliminary analysis provides a good starting point for our analysis of the relationship between agriculture and health indicators. By exploring the distribution of variables, experimenting with regression models, and conducting a correlation analysis, we have gained valuable insights into the dataset, which will inform our subsequent analysis.
+
+
+# Conclusion
+
+Conclusion:
+
+This project analyzed the percentage of infant deaths due to low birth weight (LBW) in relation to various factors. The model considered both kharif and rabi crops separately, and the regression results showed that the variables had varying levels of significance in determining the percentage of infant deaths due to LBW.
+
+The variables considered in the model included the percentage of women discharged in less than 48 hours of delivery, percentage of institutional deliveries, percentage of safe deliveries, percentage of reported live births, percentage of newborns having a weight less than 2.5 kg, percentage of female births, log of GDP, log of number of hospital beds, log of number of taps with water access, yield index of cash crops, yield index of cereal crops, number of child marriage cases reported, and the measure of nitrate in the water supply.
+
+The choice of variables was based on intuition and empirical data from various sources. The variables were mostly linear, and log10 was taken for GDP, taps, and beds, as those values were very high. The regression results showed that most variables had a significant impact on the percentage of infant deaths due to LBW, except for the percentage of female births and the measure of nitrate in the water supply.
+
+In conclusion, this project provided valuable insights into the factors that affect the percentage of infant deaths due to LBW. The findings can be used to develop policies and interventions that can reduce the incidence of LBW and improve the health outcomes of infants.
