@@ -52,9 +52,9 @@ The coefficients for most variables showed relatively small variations across di
 ## Model Description
 The model equation is as follows:
 
-`V42` = Intercept + `v12(k/r)` + `v15`kr + `v16`kr + `v25`kr + `v28`kr + `female_pct`kr + log(`beds`kr) + log(`tap`kr) + log(`gdp`kr) + `cash_index`kr + `cereal_index`kr + `child_marriage`kr + `nitrate`kr + error
+`V42` = Intercept + `v12(k/r)` + `v15(k/r)` + `v16(k/r)` + `v25(k/r)` + `v28(k/r)` + `female_pct(k/r)` + `log(beds(k/r))` + `log(tap(k/r))` + `log(gdp(k/r))` + `cash_index(k/r)` + `cereal_index(k/r)` + `child_marriage(k/r)` + `nitrate(k/r)` + `error`
 
-Here, k/r denotes that the variable is different for rabi and kharif. The model uses an intercept and considers various independent variables to predict the dependent variable V42. The model also takes into account the error term to account for any variance that cannot be explained by the included independent variables.
+Here, (k/r) denotes that the variable is different for rabi and kharif. The model uses an intercept and considers various independent variables to predict the dependent variable V42. The model also takes into account the error term to account for any variance that cannot be explained by the included independent variables.
 
 
 ## Variables
