@@ -43,10 +43,16 @@ In the third part of the analysis, we conducted a correlation analysis between y
 
 Overall, the preliminary analysis provides a good starting point for our analysis of the relationship between agriculture and health indicators. By exploring the distribution of variables, experimenting with regression models, and conducting a correlation analysis, we have gained valuable insights into the dataset, which will inform our subsequent analysis.
 
+### Monte Carlo Simulations
+
+As part of our preliminary analysis, we conducted Monte Carlo simulations to assess the robustness of our results. The goal of the simulations was to understand the variability and stability of the estimated coefficients in our regression model when a certain percentage of data is randomly dropped. We performed the simulations by randomly dropping 20% of the data from our main dataset. We repeated this process multiple times to observe the consistency of the estimated coefficients. We conducted the simulations for three different iterations: 100 times, 500 times, and 1000 times. By observing the stability and distribution of the estimated coefficients across these iterations, we gained insights into the reliability of our regression model and the potential impact of missing data.
+
+The coefficients for most variables showed relatively small variations across different iterations of the simulations. This indicates that our regression model is robust and produces consistent results even with a random drop of 20% of the data.
+
 ## Model Description
 The model equation is as follows:
 
-`V42` = Intercept + `v12`kr + `v15`kr + `v16`kr + `v25`kr + `v28`kr + `female_pct`kr + log(`beds`kr) + log(`tap`kr) + log(`gdp`kr) + `cash_index`kr + `cereal_index`kr + `child_marriage`kr + `nitrate`kr + error
+`V42` = Intercept + `v12(k/r)` + `v15`kr + `v16`kr + `v25`kr + `v28`kr + `female_pct`kr + log(`beds`kr) + log(`tap`kr) + log(`gdp`kr) + `cash_index`kr + `cereal_index`kr + `child_marriage`kr + `nitrate`kr + error
 
 Here, k/r denotes that the variable is different for rabi and kharif. The model uses an intercept and considers various independent variables to predict the dependent variable V42. The model also takes into account the error term to account for any variance that cannot be explained by the included independent variables.
 
