@@ -15,14 +15,37 @@ Samarth Raina
 Sejal Kardam
 
 
-1. [Project Overview](#project-overview)
+# Table of Contents
+1. [Introduction](#introduction)
 2. [Dataset](#dataset)
 3. [Data Preprocessing](#data-preprocessing)
 4. [Preliminary Analysis](#preliminary-analysis)
-5. [Monte Carlo Simulations](#monte-carlo-simulations)
-6. [Model Description](#model-description)
-7. [Variables Used](#variables-used)
-8. [Regression Results](#regression-results)
+    - [Exploratory Data Analysis](#exploratory-data-analysis)
+    - [Regression Modelling](#regression-modelling)
+    - [Correlation Analysis](#correlation-analysis)
+    - [Monte Carlo Simulations](#monte-carlo-simulations)
+5. [Model Description](#model-description)
+6. [Variables](#variables)
+    - [Health and Birth Indicators](#health-and-birth-indicators)
+    - [Economic Indicators](#economic-indicators)
+    - [Agricultural Indicators](#agricultural-indicators)
+    - [Environmental Indicators](#environmental-indicators)
+    - [Choice of Variables](#choice-of-variables)
+    - [Function of Variables](#function-of-variables)
+7. [Regression Results](#regression-results)
+    - [Kharif Crops](#kharif-crops)
+    - [Rabi Crops](#rabi-crops)
+8. [Findings](#findings)
+    - [Child Marriage Cases Year Wise](#child-marriage-cases-year-wise)
+    - [Factors Related to an Increase in Low Birth Weight](#factors-related-to-an-increase-in-low-birth-weight)
+    - [Factors Related to a Decrease in Low Birth Weight](#factors-related-to-a-decrease-in-low-birth-weight)
+    - [Socio-Economic Factors and Incidence of Low Birth Weight](#socio-economic-factors-and-incidence-of-low-birth-weight)
+    - [Correlation between v12 and v42](#correlation-between-v12-and-v42)
+    - [Correlation between v15 and v42](#correlation-between-v15-and-v42)
+    - [Sex Ratio, Preterm Birth Rate, and LBW Rate](#sex-ratio-preterm-birth-rate-and-lbw-rate)
+9. [Conclusion](#conclusion)
+10. [References](#references)
+
 
 ## Dataset
 The dataset used in this project contains information on agricultural yield data alongside different health indicators for different districts across six years (2011-2016) in India. The dataset was provided to us by the course instructor in the form of a CSV file.
