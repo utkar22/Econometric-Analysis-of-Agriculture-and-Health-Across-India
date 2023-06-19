@@ -1,14 +1,3 @@
-## Index
-1. [Project Overview](#project-overview)
-2. [Dataset](#dataset)
-3. [Data Preprocessing](#data-preprocessing)
-4. [Preliminary Analysis](#preliminary-analysis)
-5. [Monte Carlo Simulations](#monte-carlo-simulations)
-6. [Model Description](#model-description)
-7. [Variables Used](#variables-used)
-8. [Regression Results](#regression-results)
-
-
 # Introduction
 
 This project presents an econometric analysis of various health indicators on diseases across all districts in India, performed using R programming language. The aim of this analysis was to examine the relationship between different health indicators and diseases across various districts in India, using the cleaned and preprocessed dataset obtained by appending external data for GDP, hospital beds, and tap water availability to the main dataset. The findings of this analysis are expected to provide insights into the state of healthcare and the impact of various health indicators on diseases in different districts of India, which may inform policy decisions aimed at improving healthcare outcomes.
@@ -24,6 +13,16 @@ Krishnasai Addala
 Samarth Raina
 
 Sejal Kardam
+
+
+1. [Project Overview](#project-overview)
+2. [Dataset](#dataset)
+3. [Data Preprocessing](#data-preprocessing)
+4. [Preliminary Analysis](#preliminary-analysis)
+5. [Monte Carlo Simulations](#monte-carlo-simulations)
+6. [Model Description](#model-description)
+7. [Variables Used](#variables-used)
+8. [Regression Results](#regression-results)
 
 ## Dataset
 The dataset used in this project contains information on agricultural yield data alongside different health indicators for different districts across six years (2011-2016) in India. The dataset was provided to us by the course instructor in the form of a CSV file.
