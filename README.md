@@ -2,19 +2,6 @@
 
 This project presents an econometric analysis of various health indicators on diseases across all districts in India, performed using R programming language. The aim of this analysis was to examine the relationship between different health indicators and diseases across various districts in India, using the cleaned and preprocessed dataset obtained by appending external data for GDP, hospital beds, and tap water availability to the main dataset. The findings of this analysis are expected to provide insights into the state of healthcare and the impact of various health indicators on diseases in different districts of India, which may inform policy decisions aimed at improving healthcare outcomes.
 
-Members:
-
-Utkarsh Arora
-
-Keshav Rajput
-
-Krishnasai Addala
-
-Samarth Raina
-
-Sejal Kardam
-
-
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Dataset](#dataset)
