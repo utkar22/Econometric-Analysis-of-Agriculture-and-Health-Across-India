@@ -41,16 +41,19 @@ g <- ggplot(td, aes(estimate, label, colour = model)) +
        title = "Selected coefficients across specifications")
 ggsave(file.path(FIGURES_DIR, "coefficients_m1_m5.png"), g, width = 10, height = 9, dpi = 150)
 
-# 4. monsoon anomaly vs kharif yield shock ------------------------------------------------------------------
-g <- ggplot(p[!is.na(yidev_kharif_all)], aes(rain_jjas_anom, yidev_kharif_all)) +
+# 4. monsoon anomaly vs kharif yield shock, both demeaned by district and year fixed effects (as in the IV first stage) ----
+d <- trim_sample(p, "v42", "mean3sd")
+iv_d <- d[!is.na(yidev_kharif_all) & !is.na(rain_jjas_anom)]
+dm <- as.data.table(fixest::demean(X = as.matrix(iv_d[, .(rain_jjas_anom, yidev_kharif_all)]), f = iv_d[, .(district_id, year_f)]))
+g <- ggplot(dm, aes(rain_jjas_anom, yidev_kharif_all)) +
   geom_point(alpha = 0.15, size = 0.7) + geom_smooth(method = "lm", colour = "firebrick", linewidth = 0.7) +
   coord_cartesian(ylim = c(-2, 2)) +
-  labs(x = "monsoon (June-September) rainfall anomaly, z-score of the state's sub-divisions",
-       y = "kharif yield shock (log index minus district mean)", title = "First-stage relationship used in the IV check")
+  labs(x = "monsoon (June-September) rainfall anomaly (z), net of district and year fixed effects",
+       y = "kharif yield shock (log index minus district mean), net of district and year fixed effects",
+       title = "IV first stage: within-district, within-year relationship (M3 sample)")
 ggsave(file.path(FIGURES_DIR, "rain_vs_kharif_yield.png"), g, width = 7, height = 5, dpi = 150)
 
-# 5. residual diagnostics for M2 -------------------------------------------------------------------------
-d <- trim_sample(p, "v42", "mean3sd")
+# 5. residual diagnostics for M2 ----
 m2 <- feols(spec_formula("v42", "m2"), d, cluster = ~state)
 png(file.path(FIGURES_DIR, "residuals_m2.png"), width = 1400, height = 600, res = 150)
 par(mfrow = c(1, 2), mar = c(4, 4, 2, 1))

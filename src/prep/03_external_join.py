@@ -18,6 +18,7 @@ import pandas as pd
 from common import EXT, PROC, OUT_TABLES, YEARS, log
 
 TELANGANA_CENSUS_DISTRICTS = set(range(532, 542))  # Adilabad..Khammam, census state 28
+NFHS_OUT_OF_RANGE = 0
 
 NFHS_INDICATORS = {
     12: "nfhs_women_literate",
@@ -78,6 +79,11 @@ def nfhs4(d: pd.DataFrame) -> pd.DataFrame:
     n = n[n.indicator_number.isin(NFHS_INDICATORS)].copy()
     n["value"] = pd.to_numeric(n["total"].astype(str).str.replace(",", "", regex=False).replace({"*": np.nan, "nan": np.nan}),
                                errors="coerce")
+    # every selected indicator is a percentage; the mirror contains a few impossible values (e.g. negative totals)
+    bad = (n["value"] < 0) | (n["value"] > 100)
+    global NFHS_OUT_OF_RANGE
+    NFHS_OUT_OF_RANGE = int(bad.sum())
+    n.loc[bad, "value"] = np.nan
     w = n.pivot_table(index=["state_census_code", "district_census_code"], columns="indicator_number", values="value", aggfunc="first")
     w = w.rename(columns=NFHS_INDICATORS).reset_index().rename(columns={"state_census_code": "census_state",
                                                                           "district_census_code": "census_district"})
@@ -136,6 +142,7 @@ def main() -> None:
              f"| NFHS-4 district fact sheet joined | {n_nfhs} | {n_all} |",
              f"| States with Census population | {spop.state_pop_2011.notna().sum()} | {d.state.nunique()} |",
              f"| State-years with IMD rainfall | {len(sy)} | {d.state.nunique() * len(YEARS)} |", "",
+             f"NFHS-4 values outside 0-100 (all selected indicators are percentages) set to missing: {NFHS_OUT_OF_RANGE}.", "",
              f"## Districts created after Census 2011 (no Census/NFHS values): {int(d.census_district.isna().sum())}", ""]
     for state, dl in post2011.items():
         lines.append(f"- {state}: {', '.join(dl)}")

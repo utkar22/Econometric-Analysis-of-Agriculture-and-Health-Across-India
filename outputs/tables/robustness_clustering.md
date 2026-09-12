@@ -1,4 +1,4 @@
-# Same estimates, standard errors clustered by state (33 clusters) or by district (673 clusters)
+# Same estimates, standard errors clustered by state or by district
 
 |  | M2 cluster: state | M2 cluster: district | M3 cluster: state | M3 cluster: district |
 |---|---|---|---|---|
@@ -48,3 +48,4 @@
 | R2 | 0.272 | 0.272 | 0.557 | 0.557 |
 
 Standard errors in parentheses. * p < 0.05, ** p < 0.01, *** p < 0.001.
+Clusters in the estimation samples: M2 31 states / 659 districts; M3 33 states / 635 districts.

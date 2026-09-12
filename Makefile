@@ -3,7 +3,7 @@
 PY := $(CURDIR)/.venv/bin/python
 R  := Rscript
 
-.PHONY: all data analysis clean
+.PHONY: all data analysis clean distclean
 
 all: data analysis
 
@@ -20,4 +20,8 @@ analysis:
 	$(R) R/07_render_readme.R
 
 clean:
-	rm -f data/processed/*.csv data/processed/codebook.md outputs/tables/* outputs/figures/*
+	rm -f data/processed/crops_long.csv data/processed/crops_wide.csv data/processed/district_year.csv data/processed/external_district.csv data/processed/external_state_year.csv data/processed/state_population_2011.csv
+	rm -rf src/prep/__pycache__
+
+distclean: clean
+	rm -f data/processed/panel.csv data/processed/codebook.md outputs/tables/* outputs/figures/*

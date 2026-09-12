@@ -51,7 +51,9 @@ LABELS <- c(
 write_md_table <- function(df, path, digits = 4, title = NULL, notes = NULL) {
   df <- as.data.frame(df)
   fmt <- function(x) {
-    if (is.numeric(x)) ifelse(is.na(x), "", formatC(x, digits = digits, format = "g")) else ifelse(is.na(x), "", as.character(x))
+    if (!is.numeric(x)) return(ifelse(is.na(x), "", as.character(x)))
+    whole <- all(is.na(x) | abs(x - round(x)) < 1e-9)
+    if (whole) ifelse(is.na(x), "", sprintf("%.0f", x)) else ifelse(is.na(x), "", formatC(x, digits = digits, format = "g"))
   }
   cells <- as.data.frame(lapply(df, fmt), stringsAsFactors = FALSE)
   header <- paste0("| ", paste(names(df), collapse = " | "), " |")

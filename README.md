@@ -154,12 +154,12 @@ M3 and M5 absorb every time-invariant district and state variable (beds, tap, ni
 <!-- BEGIN TABLE: outputs/tables/main_models_fit.md -->
 | model | N | states | districts | adj_r2 | within_r2 |
 |---|---|---|---|---|---|
-| M1 original spec, corrected indices |  2375 |    24 |   565 | 0.2533 |  |
-| M1b no nitrate |  3478 |    31 |   659 | 0.2157 |  |
-| M2 year+zone FE |  3478 |    31 |   659 | 0.2667 | 0.08308 |
-| M3 district+year FE |  3432 |    33 |   635 | 0.453 | 0.007824 |
-| M4 M2 + Census/NFHS |  3143 |    31 |   584 | 0.2881 | 0.1209 |
-| M5 lags |  2664 |    33 |   612 | 0.4837 | 0.01291 |
+| M1 original spec, corrected indices | 2375 | 24 | 565 | 0.2533 |  |
+| M1b no nitrate | 3478 | 31 | 659 | 0.2157 |  |
+| M2 year+zone FE | 3478 | 31 | 659 | 0.2667 | 0.08308 |
+| M3 district+year FE | 3432 | 33 | 635 | 0.453 | 0.007824 |
+| M4 M2 + Census/NFHS | 3143 | 31 | 584 | 0.2881 | 0.1209 |
+| M5 lags | 2664 | 33 | 612 | 0.4837 | 0.01291 |
 <!-- END TABLE -->
 
 ![Selected coefficients across specifications](outputs/figures/coefficients_m1_m5.png)
@@ -173,8 +173,9 @@ What the table shows:
   at all. The GDP sign is the opposite of a nutrition story; the most plausible reading is that richer states
   attribute a larger share of infant deaths to LBW (cause-of-death reporting), not that they have more of them.
 - **Within districts, nothing explains changes in `v42` over time.** With district and year fixed effects
-  (M3, M5) the within-R² is below 0.02 and no yield shock, rainfall anomaly or health-process variable is
-  distinguishable from zero. Child-marriage cases per million is the only within-district coefficient whose
+  (M3, M5) the within-R² is below 0.02 and no contemporaneous yield shock, rainfall anomaly or health-process
+  variable is distinguishable from zero; the one exception is the one-year-lagged monsoon anomaly in M5 (+0.65,
+  p = 0.04), a single marginal coefficient among the many tested. Child-marriage cases per million is the only within-district coefficient whose
   bootstrap interval excludes zero (M3: +2.1, CI 0.1 to 4.6), and it is a state-level reported count.
 - **Health-process variables.** Institutional deliveries (v15) keep the positive sign the original report found,
   but only in the year+zone model (M2: +0.07 per point, p < 0.01); it is absent with district effects. v12,
@@ -259,7 +260,8 @@ make all
 ```
 
 `make data` runs only the Python steps (`src/prep/01_clean_raw.py` … `04_build_panel.py`), `make analysis`
-only the R scripts; `make clean` removes generated files. Individual scripts run from the repository root, e.g.
+only the R scripts; `make clean` removes the git-ignored intermediates; `make distclean` also removes the committed generated files
+(panel, codebook, tables, figures), which `make all` recreates. Individual scripts run from the repository root, e.g.
 `Rscript R/03_main_models.R`. The pipeline is deterministic (fixed seeds); a second run produces no diff.
 Legacy scripts: `Rscript legacy/Code/Regression/q1a.r` (see [legacy/NOTES.md](legacy/NOTES.md)).
 

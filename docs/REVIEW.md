@@ -81,7 +81,8 @@ See `outputs/tables/main_models.md` and the README. In short: with correctly bui
 state-clustered SEs, the cross-sectional associations that survive are state GDP per capita (positive: richer
 states report a larger LBW share of infant deaths, most plausibly a reporting/cause-attribution pattern) and the
 rabi cereal yield index (negative). Once district fixed effects absorb everything that does not change within a
-district, no time-varying regressor, yield shocks and monsoon anomalies included, explains within-district
-changes in `v42` (within-R² < 0.01). The original report's headline effects of child marriage, hospital beds and
+district, no contemporaneous time-varying regressor, yield shocks and monsoon anomalies included, explains
+within-district changes in `v42` (within-R² < 0.02); the one-year-lagged monsoon anomaly in M5 is the single
+marginal exception (+0.65, p = 0.04). The original report's headline effects of child marriage, hospital beds and
 the Kharif cash-crop index were products of the index construction and of iid standard errors on state-level
 regressors.

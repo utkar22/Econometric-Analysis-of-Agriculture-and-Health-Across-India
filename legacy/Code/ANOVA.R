@@ -189,7 +189,7 @@ for (i in 1:nrow(clean_data_rabi)){
 	child_marriage_data <- clean_data_rabi[i,73]
 	nitrate_data <- clean_data_rabi[i,74]
 	
-	state <- clean_data_kharif[i,4]
+	state <- clean_data_rabi[i,4]
 
 	if (lbw_data<upper_bound_rabi && !is.na(gdp_data) && !is.na(beds_data) && !is.na(tap_data) &&
 	  (gdp_data!=0) && (beds_data!=0) && (tap_data!=0)&& !is.na(child_marriage_data) 

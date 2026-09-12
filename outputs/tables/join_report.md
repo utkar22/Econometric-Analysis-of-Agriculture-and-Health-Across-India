@@ -11,6 +11,8 @@ Join key: `districtlgdcode` -> LGD directory -> Census 2011 district code (Telan
 | States with Census population | 33 | 33 |
 | State-years with IMD rainfall | 198 | 198 |
 
+NFHS-4 values outside 0-100 (all selected indicators are percentages) set to missing: 290.
+
 ## Districts created after Census 2011 (no Census/NFHS values): 79
 
 - Arunachal Pradesh: Longding, Namsai

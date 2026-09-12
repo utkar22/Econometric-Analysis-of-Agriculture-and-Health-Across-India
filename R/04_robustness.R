@@ -107,6 +107,9 @@ write_md_table(iv_tab, file.path(TABLES_DIR, "robustness_iv.md"), digits = 4,
 # (f) clustering level -------------------------------------------------------------------------------------
 cl <- list("M2 cluster: state" = feols(f2, d, cluster = ~state), "M2 cluster: district" = feols(f2, d, cluster = ~districtlgdcode),
            "M3 cluster: state" = feols(f3, d, cluster = ~state), "M3 cluster: district" = feols(f3, d, cluster = ~districtlgdcode))
+nc <- function(m) c(uniqueN(d[obs(m)]$state), uniqueN(d[obs(m)]$districtlgdcode))
+nc2 <- nc(cl[[1]]); nc3 <- nc(cl[[3]])
 write_models_md(cl, output = file.path(TABLES_DIR, "robustness_clustering.md"), coef_map = COEF_MAP, gof_map = GOF_MAP, stars = STARS,
-             title = "Same estimates, standard errors clustered by state (33 clusters) or by district (673 clusters)")
+             title = "Same estimates, standard errors clustered by state or by district",
+             notes = sprintf("Clusters in the estimation samples: M2 %d states / %d districts; M3 %d states / %d districts.", nc2[1], nc2[2], nc3[1], nc3[2]))
 cat("robustness tables written\n")
