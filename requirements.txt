@@ -1,0 +1,3 @@
+# Data-preparation dependencies (Python >= 3.10). Analysis is in R; see R/install_packages.R
+pandas>=2.2
+numpy>=1.26

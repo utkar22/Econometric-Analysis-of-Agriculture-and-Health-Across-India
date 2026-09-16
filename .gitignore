@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS / editors
+.DS_Store
+Thumbs.db
+Rplots.pdf
+
+# Regenerable intermediates (make data); only panel.csv and codebook.md are committed
+data/processed/crops_long.csv
+data/processed/crops_wide.csv
+data/processed/district_year.csv
+data/processed/external_district.csv
+data/processed/external_state_year.csv
+data/processed/state_population_2011.csv
