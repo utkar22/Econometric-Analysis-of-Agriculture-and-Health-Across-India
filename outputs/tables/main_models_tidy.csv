@@ -1,105 +1,105 @@
 term,estimate,std_error,p_value,model,label
-(Intercept),-22.19023561,57.7675744,0.7044108147,"M1 original spec, corrected indices",(Intercept)
-v12,0.002252020102,0.02528980206,0.9298141997,"M1 original spec, corrected indices",v12 discharged <48h (%)
-v15,0.07079774038,0.06123199232,0.2594597974,"M1 original spec, corrected indices",v15 institutional deliveries (%)
-v16,-0.06155763721,0.08130682401,0.4566747636,"M1 original spec, corrected indices",v16 safe deliveries (%)
-v25,-0.7609071239,0.4644070779,0.1149374306,"M1 original spec, corrected indices",v25 live births (%)
-v28,0.04650940474,0.03765901797,0.2292935544,"M1 original spec, corrected indices",v28 newborns <2.5 kg (%)
-female_pct,0.2158222984,0.4200180447,0.6122650471,"M1 original spec, corrected indices",Female share of births (%)
-log_gdp,7.299879768,1.8154968,0.0005341217673,"M1 original spec, corrected indices",log state GDP
-log_beds,-2.770843636,1.78888424,0.1350516013,"M1 original spec, corrected indices",log state beds
-log_tap,0.4410674267,0.2932494601,0.1461725292,"M1 original spec, corrected indices",log tap-water HH (%)
-child_marriage,-0.01404099422,0.06509369729,0.8311196662,"M1 original spec, corrected indices",Child-marriage cases (state count)
-nitrate,0.1322145937,0.119740174,0.2809338354,"M1 original spec, corrected indices",Nitrate (state)
-yi_kharif_cash_0,-0.1753795578,0.03902250133,0.000164180558,"M1 original spec, corrected indices",Kharif cash-crop yield index
-grows_kharif_cash,1.333068464,1.048826778,0.216430393,"M1 original spec, corrected indices",Grows kharif cash crops (1/0)
-yi_kharif_cereal_0,-0.4655525019,0.4477590086,0.3092685036,"M1 original spec, corrected indices",Kharif cereal yield index
-grows_kharif_cereal,1.467297721,1.421097531,0.3125686825,"M1 original spec, corrected indices",Grows kharif cereals (1/0)
-yi_rabi_cash_0,0.05587034532,0.02792300272,0.0573441777,"M1 original spec, corrected indices",Rabi cash-crop yield index
-grows_rabi_cash,-0.4672102919,0.9470188371,0.6264442297,"M1 original spec, corrected indices",Grows rabi cash crops (1/0)
-yi_rabi_cereal_0,-1.69097154,0.4290280915,0.0006505947261,"M1 original spec, corrected indices",Rabi cereal yield index
-grows_rabi_cereal,9.591674229,1.758629169,1.523208506e-05,"M1 original spec, corrected indices",Grows rabi cereals (1/0)
-(Intercept),19.5588315,56.46382058,0.7314631034,M1b no nitrate,(Intercept)
-v12,-0.02336737423,0.02208421558,0.2984543803,M1b no nitrate,v12 discharged <48h (%)
-v15,0.0882034499,0.0611874092,0.1597932063,M1b no nitrate,v15 institutional deliveries (%)
-v16,-0.06440060451,0.05712429617,0.2685197553,M1b no nitrate,v16 safe deliveries (%)
-v25,-1.054509551,0.4730895575,0.03345380128,M1b no nitrate,v25 live births (%)
-v28,0.07867106008,0.03917047853,0.05367415082,M1b no nitrate,v28 newborns <2.5 kg (%)
-female_pct,0.4047691827,0.3037151307,0.192655892,M1b no nitrate,Female share of births (%)
-log_gdp,6.762477221,1.834729699,0.0008983026475,M1b no nitrate,log state GDP
-log_beds,-3.975970351,1.765599571,0.03180485588,M1b no nitrate,log state beds
-log_tap,0.921522245,0.3222789388,0.007651314451,M1b no nitrate,log tap-water HH (%)
-child_marriage,-0.02420276029,0.0574729935,0.6766726848,M1b no nitrate,Child-marriage cases (state count)
-yi_kharif_cash_0,-0.07908865885,0.04934715331,0.1194793857,M1b no nitrate,Kharif cash-crop yield index
-grows_kharif_cash,2.044048189,0.9057243406,0.03146196431,M1b no nitrate,Grows kharif cash crops (1/0)
-yi_kharif_cereal_0,-0.282034398,0.4257776239,0.5127730135,M1b no nitrate,Kharif cereal yield index
-grows_kharif_cereal,1.136855362,1.457810476,0.4415958773,M1b no nitrate,Grows kharif cereals (1/0)
-yi_rabi_cash_0,0.04054503748,0.03017549896,0.1891398804,M1b no nitrate,Rabi cash-crop yield index
-grows_rabi_cash,1.606880905,1.407905886,0.2627627897,M1b no nitrate,Grows rabi cash crops (1/0)
-yi_rabi_cereal_0,-1.872693118,0.4701359351,0.0003997699434,M1b no nitrate,Rabi cereal yield index
-grows_rabi_cereal,8.361566116,1.35496863,8.652470503e-07,M1b no nitrate,Grows rabi cereals (1/0)
-v12,0.001762493332,0.01395799622,0.9003597177,M2 year+zone FE,v12 discharged <48h (%)
-v15,0.06864346236,0.0242658415,0.008249568801,M2 year+zone FE,v15 institutional deliveries (%)
-v25,-0.5947371077,0.4024437599,0.1498802679,M2 year+zone FE,v25 live births (%)
-v28,0.03177907969,0.04418814675,0.4775972622,M2 year+zone FE,v28 newborns <2.5 kg (%)
-female_pct,0.006210849986,0.2820776684,0.9825792164,M2 year+zone FE,Female share of births (%)
-log_gdp_pc,6.541311796,2.638320879,0.019004902,M2 year+zone FE,log state GDP per capita
-beds_per_lakh,-0.01335522256,0.01251840883,0.2945516625,M2 year+zone FE,State beds per 100k
-log_tap,0.2463837124,0.2601916064,0.3512390524,M2 year+zone FE,log tap-water HH (%)
-child_marriage_per_mn,1.088409992,1.701098852,0.5271411606,M2 year+zone FE,Child-marriage cases per mn
-yi_kharif_cash_0,0.04496710498,0.03439806908,0.2010567537,M2 year+zone FE,Kharif cash-crop yield index
-grows_kharif_cash,1.242699698,0.7439691483,0.1052498502,M2 year+zone FE,Grows kharif cash crops (1/0)
-yi_kharif_cereal_0,-0.05291425141,0.3871039085,0.8921869754,M2 year+zone FE,Kharif cereal yield index
-grows_kharif_cereal,1.255877169,1.381417468,0.3705319022,M2 year+zone FE,Grows kharif cereals (1/0)
-yi_rabi_cash_0,0.06054804577,0.02342218964,0.01484193932,M2 year+zone FE,Rabi cash-crop yield index
-grows_rabi_cash,0.9316178638,0.8458592852,0.2794870514,M2 year+zone FE,Grows rabi cash crops (1/0)
-yi_rabi_cereal_0,-1.460890829,0.2942235585,2.569877293e-05,M2 year+zone FE,Rabi cereal yield index
-grows_rabi_cereal,6.938764691,1.676249656,0.0002599281839,M2 year+zone FE,Grows rabi cereals (1/0)
-v12,0.01922074366,0.02395998043,0.4283537404,M3 district+year FE,v12 discharged <48h (%)
-v15,-0.0628908774,0.06357961865,0.3300022303,M3 district+year FE,v15 institutional deliveries (%)
-v25,0.8416869566,0.6087969481,0.1763790373,M3 district+year FE,v25 live births (%)
-v28,0.05181374233,0.06168790461,0.4071774984,M3 district+year FE,v28 newborns <2.5 kg (%)
-female_pct,-0.2339883885,0.3771677214,0.5393992347,M3 district+year FE,Female share of births (%)
-log_gdp_pc,-1.472893955,6.792419408,0.8297066597,M3 district+year FE,log state GDP per capita
-child_marriage_per_mn,2.058772625,1.149987496,0.08287904477,M3 district+year FE,Child-marriage cases per mn
-yidev_kharif_all,0.4352321333,0.8635558736,0.6177139446,M3 district+year FE,Kharif yield shock (log dev.)
-yidev_rabi_all,-0.5666256808,0.4909932416,0.2570303248,M3 district+year FE,Rabi yield shock (log dev.)
-rain_jjas_anom,0.1745456495,0.3339866735,0.6048435987,M3 district+year FE,Monsoon rainfall anomaly (z)
-v12,0.009713517929,0.01342696092,0.4750167236,M4 M2 + Census/NFHS,v12 discharged <48h (%)
-v15,0.03452832374,0.02869523013,0.2382788902,M4 M2 + Census/NFHS,v15 institutional deliveries (%)
-v25,-0.5926682034,0.3582266635,0.1084629635,M4 M2 + Census/NFHS,v25 live births (%)
-v28,-0.005330883826,0.03233655575,0.8701629415,M4 M2 + Census/NFHS,v28 newborns <2.5 kg (%)
-female_pct,-0.1609284812,0.319336627,0.6179801857,M4 M2 + Census/NFHS,Female share of births (%)
-log_gdp_pc,5.80071633,2.053566051,0.008333162921,M4 M2 + Census/NFHS,log state GDP per capita
-beds_per_lakh,-0.009374959276,0.008822278193,0.2964220744,M4 M2 + Census/NFHS,State beds per 100k
-log_tap,0.05835040456,0.2774060832,0.8348221627,M4 M2 + Census/NFHS,log tap-water HH (%)
-child_marriage_per_mn,0.7936406748,1.315004331,0.5506945553,M4 M2 + Census/NFHS,Child-marriage cases per mn
-yi_kharif_cash_0,0.03451095222,0.02215149128,0.1297327651,M4 M2 + Census/NFHS,Kharif cash-crop yield index
-grows_kharif_cash,0.7619221072,0.6298522933,0.2358467276,M4 M2 + Census/NFHS,Grows kharif cash crops (1/0)
-yi_kharif_cereal_0,-0.1113285627,0.3384331154,0.7444767335,M4 M2 + Census/NFHS,Kharif cereal yield index
-grows_kharif_cereal,0.2231751922,1.080833715,0.8378076389,M4 M2 + Census/NFHS,Grows kharif cereals (1/0)
-yi_rabi_cash_0,0.05650634344,0.02031339784,0.009257099838,M4 M2 + Census/NFHS,Rabi cash-crop yield index
-grows_rabi_cash,0.07146675227,0.7052208947,0.9199552259,M4 M2 + Census/NFHS,Grows rabi cash crops (1/0)
-yi_rabi_cereal_0,-1.086381451,0.221196814,2.991797334e-05,M4 M2 + Census/NFHS,Rabi cereal yield index
-grows_rabi_cereal,5.28017206,2.036865467,0.0145905592,M4 M2 + Census/NFHS,Grows rabi cereals (1/0)
-lit_rate,0.07238290936,0.04618032973,0.1275106687,M4 M2 + Census/NFHS,Literacy rate 2011 (%)
-urban_share,0.009995568705,0.02702116237,0.7140435401,M4 M2 + Census/NFHS,Urban share 2011 (%)
-sc_st_share,-0.04365907402,0.02149576689,0.05119250379,M4 M2 + Census/NFHS,SC+ST share 2011 (%)
-agri_worker_share,0.05294738344,0.03355061251,0.1250224239,M4 M2 + Census/NFHS,Agricultural workers 2011 (%)
-nfhs_women_anaemic,0.002320338614,0.02527980138,0.9274780271,M4 M2 + Census/NFHS,NFHS-4 women anaemic (%)
-nfhs_married_before18,0.02343357964,0.03774223724,0.539364476,M4 M2 + Census/NFHS,NFHS-4 married <18 (%)
-nfhs_anc4_visits,0.09324757951,0.01646129964,3.571436954e-06,M4 M2 + Census/NFHS,NFHS-4 4+ ANC visits (%)
-nfhs_women_bmi_low,0.2520009576,0.06182082885,0.0003094753198,M4 M2 + Census/NFHS,NFHS-4 women BMI<18.5 (%)
-v12,0.005518040267,0.0250375504,0.8269670502,M5 lags,v12 discharged <48h (%)
-v15,0.00814193315,0.06200549519,0.8963522849,M5 lags,v15 institutional deliveries (%)
-v25,1.077221868,0.847988712,0.2131276279,M5 lags,v25 live births (%)
-v28,0.02486136989,0.06334697405,0.6973178706,M5 lags,v28 newborns <2.5 kg (%)
-female_pct,-0.619835703,0.4149921754,0.1450737549,M5 lags,Female share of births (%)
-log_gdp_pc,-1.692489333,9.619717945,0.8614500828,M5 lags,log state GDP per capita
-child_marriage_per_mn,2.31419637,1.061051174,0.03664206572,M5 lags,Child-marriage cases per mn
-yidev_kharif_all,0.2865729345,0.9781887766,0.7714420021,M5 lags,Kharif yield shock (log dev.)
-yidev_kharif_all_lag1,1.127907841,0.7475236641,0.1411459643,M5 lags,"Kharif yield shock, t-1"
-yidev_rabi_all,-0.4052872827,0.6081428062,0.5099100951,M5 lags,Rabi yield shock (log dev.)
-yidev_rabi_all_lag1,-1.102484477,0.7940867956,0.1746149967,M5 lags,"Rabi yield shock, t-1"
-rain_jjas_anom,0.2616785827,0.3795640404,0.495529005,M5 lags,Monsoon rainfall anomaly (z)
-rain_jjas_anom_lag1,0.6494128299,0.3039046527,0.0403498093,M5 lags,"Monsoon anomaly, t-1 (z)"
+(Intercept),-22.1902,57.7676,0.704411,"M1 original spec, corrected indices",(Intercept)
+v12,0.00225202,0.0252898,0.929814,"M1 original spec, corrected indices",v12 discharged <48h (%)
+v15,0.0707977,0.061232,0.25946,"M1 original spec, corrected indices",v15 institutional deliveries (%)
+v16,-0.0615576,0.0813068,0.456675,"M1 original spec, corrected indices",v16 safe deliveries (%)
+v25,-0.760907,0.464407,0.114937,"M1 original spec, corrected indices",v25 live births (%)
+v28,0.0465094,0.037659,0.229294,"M1 original spec, corrected indices",v28 newborns <2.5 kg (%)
+female_pct,0.215822,0.420018,0.612265,"M1 original spec, corrected indices",Female share of births (%)
+log_gdp,7.29988,1.8155,0.000534122,"M1 original spec, corrected indices",log state GDP
+log_beds,-2.77084,1.78888,0.135052,"M1 original spec, corrected indices",log state beds
+log_tap,0.441067,0.293249,0.146173,"M1 original spec, corrected indices",log tap-water HH (%)
+child_marriage,-0.014041,0.0650937,0.83112,"M1 original spec, corrected indices",Child-marriage cases (state count)
+nitrate,0.132215,0.11974,0.280934,"M1 original spec, corrected indices",Nitrate (state)
+yi_kharif_cash_0,-0.17538,0.0390225,0.000164181,"M1 original spec, corrected indices",Kharif cash-crop yield index
+grows_kharif_cash,1.33307,1.04883,0.21643,"M1 original spec, corrected indices",Grows kharif cash crops (1/0)
+yi_kharif_cereal_0,-0.465553,0.447759,0.309269,"M1 original spec, corrected indices",Kharif cereal yield index
+grows_kharif_cereal,1.4673,1.4211,0.312569,"M1 original spec, corrected indices",Grows kharif cereals (1/0)
+yi_rabi_cash_0,0.0558703,0.027923,0.0573442,"M1 original spec, corrected indices",Rabi cash-crop yield index
+grows_rabi_cash,-0.46721,0.947019,0.626444,"M1 original spec, corrected indices",Grows rabi cash crops (1/0)
+yi_rabi_cereal_0,-1.69097,0.429028,0.000650595,"M1 original spec, corrected indices",Rabi cereal yield index
+grows_rabi_cereal,9.59167,1.75863,1.52321e-05,"M1 original spec, corrected indices",Grows rabi cereals (1/0)
+(Intercept),19.5588,56.4638,0.731463,M1b no nitrate,(Intercept)
+v12,-0.0233674,0.0220842,0.298454,M1b no nitrate,v12 discharged <48h (%)
+v15,0.0882034,0.0611874,0.159793,M1b no nitrate,v15 institutional deliveries (%)
+v16,-0.0644006,0.0571243,0.26852,M1b no nitrate,v16 safe deliveries (%)
+v25,-1.05451,0.47309,0.0334538,M1b no nitrate,v25 live births (%)
+v28,0.0786711,0.0391705,0.0536742,M1b no nitrate,v28 newborns <2.5 kg (%)
+female_pct,0.404769,0.303715,0.192656,M1b no nitrate,Female share of births (%)
+log_gdp,6.76248,1.83473,0.000898303,M1b no nitrate,log state GDP
+log_beds,-3.97597,1.7656,0.0318049,M1b no nitrate,log state beds
+log_tap,0.921522,0.322279,0.00765131,M1b no nitrate,log tap-water HH (%)
+child_marriage,-0.0242028,0.057473,0.676673,M1b no nitrate,Child-marriage cases (state count)
+yi_kharif_cash_0,-0.0790887,0.0493472,0.119479,M1b no nitrate,Kharif cash-crop yield index
+grows_kharif_cash,2.04405,0.905724,0.031462,M1b no nitrate,Grows kharif cash crops (1/0)
+yi_kharif_cereal_0,-0.282034,0.425778,0.512773,M1b no nitrate,Kharif cereal yield index
+grows_kharif_cereal,1.13686,1.45781,0.441596,M1b no nitrate,Grows kharif cereals (1/0)
+yi_rabi_cash_0,0.040545,0.0301755,0.18914,M1b no nitrate,Rabi cash-crop yield index
+grows_rabi_cash,1.60688,1.40791,0.262763,M1b no nitrate,Grows rabi cash crops (1/0)
+yi_rabi_cereal_0,-1.87269,0.470136,0.00039977,M1b no nitrate,Rabi cereal yield index
+grows_rabi_cereal,8.36157,1.35497,8.65247e-07,M1b no nitrate,Grows rabi cereals (1/0)
+v12,0.00176249,0.013958,0.90036,M2 year+zone FE,v12 discharged <48h (%)
+v15,0.0686435,0.0242658,0.00824957,M2 year+zone FE,v15 institutional deliveries (%)
+v25,-0.594737,0.402444,0.14988,M2 year+zone FE,v25 live births (%)
+v28,0.0317791,0.0441881,0.477597,M2 year+zone FE,v28 newborns <2.5 kg (%)
+female_pct,0.00621085,0.282078,0.982579,M2 year+zone FE,Female share of births (%)
+log_gdp_pc,6.54131,2.63832,0.0190049,M2 year+zone FE,log state GDP per capita
+beds_per_lakh,-0.0133552,0.0125184,0.294552,M2 year+zone FE,State beds per 100k
+log_tap,0.246384,0.260192,0.351239,M2 year+zone FE,log tap-water HH (%)
+child_marriage_per_mn,1.08841,1.7011,0.527141,M2 year+zone FE,Child-marriage cases per mn
+yi_kharif_cash_0,0.0449671,0.0343981,0.201057,M2 year+zone FE,Kharif cash-crop yield index
+grows_kharif_cash,1.2427,0.743969,0.10525,M2 year+zone FE,Grows kharif cash crops (1/0)
+yi_kharif_cereal_0,-0.0529143,0.387104,0.892187,M2 year+zone FE,Kharif cereal yield index
+grows_kharif_cereal,1.25588,1.38142,0.370532,M2 year+zone FE,Grows kharif cereals (1/0)
+yi_rabi_cash_0,0.060548,0.0234222,0.0148419,M2 year+zone FE,Rabi cash-crop yield index
+grows_rabi_cash,0.931618,0.845859,0.279487,M2 year+zone FE,Grows rabi cash crops (1/0)
+yi_rabi_cereal_0,-1.46089,0.294224,2.56988e-05,M2 year+zone FE,Rabi cereal yield index
+grows_rabi_cereal,6.93876,1.67625,0.000259928,M2 year+zone FE,Grows rabi cereals (1/0)
+v12,0.0192207,0.02396,0.428354,M3 district+year FE,v12 discharged <48h (%)
+v15,-0.0628909,0.0635796,0.330002,M3 district+year FE,v15 institutional deliveries (%)
+v25,0.841687,0.608797,0.176379,M3 district+year FE,v25 live births (%)
+v28,0.0518137,0.0616879,0.407177,M3 district+year FE,v28 newborns <2.5 kg (%)
+female_pct,-0.233988,0.377168,0.539399,M3 district+year FE,Female share of births (%)
+log_gdp_pc,-1.47289,6.79242,0.829707,M3 district+year FE,log state GDP per capita
+child_marriage_per_mn,2.05877,1.14999,0.082879,M3 district+year FE,Child-marriage cases per mn
+yidev_kharif_all,0.435232,0.863556,0.617714,M3 district+year FE,Kharif yield shock (log dev.)
+yidev_rabi_all,-0.566626,0.490993,0.25703,M3 district+year FE,Rabi yield shock (log dev.)
+rain_jjas_anom,0.174546,0.333987,0.604844,M3 district+year FE,Monsoon rainfall anomaly (z)
+v12,0.00971352,0.013427,0.475017,M4 M2 + Census/NFHS,v12 discharged <48h (%)
+v15,0.0345283,0.0286952,0.238279,M4 M2 + Census/NFHS,v15 institutional deliveries (%)
+v25,-0.592668,0.358227,0.108463,M4 M2 + Census/NFHS,v25 live births (%)
+v28,-0.00533088,0.0323366,0.870163,M4 M2 + Census/NFHS,v28 newborns <2.5 kg (%)
+female_pct,-0.160928,0.319337,0.61798,M4 M2 + Census/NFHS,Female share of births (%)
+log_gdp_pc,5.80072,2.05357,0.00833316,M4 M2 + Census/NFHS,log state GDP per capita
+beds_per_lakh,-0.00937496,0.00882228,0.296422,M4 M2 + Census/NFHS,State beds per 100k
+log_tap,0.0583504,0.277406,0.834822,M4 M2 + Census/NFHS,log tap-water HH (%)
+child_marriage_per_mn,0.793641,1.315,0.550695,M4 M2 + Census/NFHS,Child-marriage cases per mn
+yi_kharif_cash_0,0.034511,0.0221515,0.129733,M4 M2 + Census/NFHS,Kharif cash-crop yield index
+grows_kharif_cash,0.761922,0.629852,0.235847,M4 M2 + Census/NFHS,Grows kharif cash crops (1/0)
+yi_kharif_cereal_0,-0.111329,0.338433,0.744477,M4 M2 + Census/NFHS,Kharif cereal yield index
+grows_kharif_cereal,0.223175,1.08083,0.837808,M4 M2 + Census/NFHS,Grows kharif cereals (1/0)
+yi_rabi_cash_0,0.0565063,0.0203134,0.0092571,M4 M2 + Census/NFHS,Rabi cash-crop yield index
+grows_rabi_cash,0.0714668,0.705221,0.919955,M4 M2 + Census/NFHS,Grows rabi cash crops (1/0)
+yi_rabi_cereal_0,-1.08638,0.221197,2.9918e-05,M4 M2 + Census/NFHS,Rabi cereal yield index
+grows_rabi_cereal,5.28017,2.03687,0.0145906,M4 M2 + Census/NFHS,Grows rabi cereals (1/0)
+lit_rate,0.0723829,0.0461803,0.127511,M4 M2 + Census/NFHS,Literacy rate 2011 (%)
+urban_share,0.00999557,0.0270212,0.714044,M4 M2 + Census/NFHS,Urban share 2011 (%)
+sc_st_share,-0.0436591,0.0214958,0.0511925,M4 M2 + Census/NFHS,SC+ST share 2011 (%)
+agri_worker_share,0.0529474,0.0335506,0.125022,M4 M2 + Census/NFHS,Agricultural workers 2011 (%)
+nfhs_women_anaemic,0.00232034,0.0252798,0.927478,M4 M2 + Census/NFHS,NFHS-4 women anaemic (%)
+nfhs_married_before18,0.0234336,0.0377422,0.539364,M4 M2 + Census/NFHS,NFHS-4 married <18 (%)
+nfhs_anc4_visits,0.0932476,0.0164613,3.57144e-06,M4 M2 + Census/NFHS,NFHS-4 4+ ANC visits (%)
+nfhs_women_bmi_low,0.252001,0.0618208,0.000309475,M4 M2 + Census/NFHS,NFHS-4 women BMI<18.5 (%)
+v12,0.00551804,0.0250376,0.826967,M5 lags,v12 discharged <48h (%)
+v15,0.00814193,0.0620055,0.896352,M5 lags,v15 institutional deliveries (%)
+v25,1.07722,0.847989,0.213128,M5 lags,v25 live births (%)
+v28,0.0248614,0.063347,0.697318,M5 lags,v28 newborns <2.5 kg (%)
+female_pct,-0.619836,0.414992,0.145074,M5 lags,Female share of births (%)
+log_gdp_pc,-1.69249,9.61972,0.86145,M5 lags,log state GDP per capita
+child_marriage_per_mn,2.3142,1.06105,0.0366421,M5 lags,Child-marriage cases per mn
+yidev_kharif_all,0.286573,0.978189,0.771442,M5 lags,Kharif yield shock (log dev.)
+yidev_kharif_all_lag1,1.12791,0.747524,0.141146,M5 lags,"Kharif yield shock, t-1"
+yidev_rabi_all,-0.405287,0.608143,0.50991,M5 lags,Rabi yield shock (log dev.)
+yidev_rabi_all_lag1,-1.10248,0.794087,0.174615,M5 lags,"Rabi yield shock, t-1"
+rain_jjas_anom,0.261679,0.379564,0.495529,M5 lags,Monsoon rainfall anomaly (z)
+rain_jjas_anom_lag1,0.649413,0.303905,0.0403498,M5 lags,"Monsoon anomaly, t-1 (z)"
