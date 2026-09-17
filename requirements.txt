@@ -1,3 +1,4 @@
 # Data-preparation dependencies (Python >= 3.10). Analysis is in R; see R/install_packages.R
-pandas>=2.2
-numpy>=1.26
+# Pinned: the committed files in data/processed and outputs/ were produced with these versions.
+pandas==3.0.5
+numpy==2.5.3

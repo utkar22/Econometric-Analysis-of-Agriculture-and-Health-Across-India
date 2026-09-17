@@ -16,6 +16,6 @@ for (spec in c("m2", "m3")) {
                                SPEC_NAMES[spec]),
                notes = "Zero shares: diarrhoea 56%, fever 37%, measles 92% of district-years; treat those columns as descriptive only.")
   tidy <- rbindlist(lapply(names(ms), function(nm) as.data.table(tidy_fixest(ms[[nm]]))[, outcome := nm][, spec := spec]))
-  fwrite(tidy, file.path(TABLES_DIR, sprintf("other_outcomes_%s_tidy.csv", spec)))
+  fwrite_stable(tidy, file.path(TABLES_DIR, sprintf("other_outcomes_%s_tidy.csv", spec)))
 }
 cat("other-outcome tables written\n")

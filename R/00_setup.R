@@ -74,6 +74,16 @@ tidy_fixest <- function(m, vcov = NULL) {
 
 stars <- function(p) ifelse(p < 0.001, "***", ifelse(p < 0.01, "**", ifelse(p < 0.05, "*", "")))
 
+# Estimates differ in their last bits between platforms (BLAS differences), which changes the text `fwrite`
+# produces even though the numbers agree to any precision that is read. Rounding to 10 significant digits
+# keeps the committed CSVs byte-identical across machines.
+fwrite_stable <- function(dt, path, digits = 10) {
+  dt <- data.table::copy(as.data.table(dt))
+  num <- names(dt)[vapply(dt, is.numeric, logical(1))]
+  if (length(num)) dt[, (num) := lapply(.SD, signif, digits = digits), .SDcols = num]
+  data.table::fwrite(dt, path)
+}
+
 # ---------------------------------------------------------------------------------------------
 # Model sample and specifications shared by 03_main_models.R, 04_robustness.R, 05_other_outcomes.R
 # ---------------------------------------------------------------------------------------------

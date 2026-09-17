@@ -15,7 +15,7 @@ Outputs:
 import numpy as np
 import pandas as pd
 
-from common import EXT, PROC, OUT_TABLES, YEARS, log
+from common import EXT, PROC, OUT_TABLES, YEARS, log, write_csv
 
 TELANGANA_CENSUS_DISTRICTS = set(range(532, 542))  # Adilabad..Khammam, census state 28
 NFHS_OUT_OF_RANGE = 0
@@ -122,9 +122,9 @@ def main() -> None:
 
     keep = ["statelgdcode", "districtlgdcode", "census_state", "census_district", "pop_2011", "lit_rate", "f_lit_rate",
             "sc_st_share", "agri_worker_share", "urban_share"] + list(NFHS_INDICATORS.values())
-    d[keep].to_csv(PROC / "external_district.csv", index=False)
-    spop.to_csv(PROC / "state_population_2011.csv", index=False)
-    sy.to_csv(PROC / "external_state_year.csv", index=False)
+    write_csv(d[keep], PROC / "external_district.csv")
+    write_csv(spop, PROC / "state_population_2011.csv")
+    write_csv(sy, PROC / "external_state_year.csv")
 
     n_all = len(d)
     n_census_code = d.census_district.notna().sum()

@@ -6,7 +6,7 @@ Output: data/processed/panel.csv (one row per district-year), data/processed/cod
 import numpy as np
 import pandas as pd
 
-from common import PROC, STATE_TO_ZONE, V_DOCUMENTED, log
+from common import PROC, STATE_TO_ZONE, V_DOCUMENTED, log, write_csv
 
 KEYS = ["statelgdcode", "districtlgdcode", "year"]
 
@@ -103,7 +103,7 @@ def main() -> None:
     p["nitrate_missing"] = p.nitrate.isna().astype(int)
 
     p = p.sort_values(KEYS).reset_index(drop=True)
-    p.to_csv(PROC / "panel.csv", index=False)
+    write_csv(p, PROC / "panel.csv")
     log(f"panel rows={len(p)} cols={p.shape[1]} districts={p.districtlgdcode.nunique()}")
 
     # codebook

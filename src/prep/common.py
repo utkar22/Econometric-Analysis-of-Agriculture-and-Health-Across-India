@@ -55,3 +55,15 @@ V_DOCUMENTED = {
 
 def log(msg: str) -> None:
     print(f"[prep] {msg}", flush=True)
+
+
+# Floating-point results differ in their last bits between platforms (BLAS and SIMD differences), which
+# changes the shortest round-trip text that `to_csv` writes even when the numbers are identical to any
+# precision anyone reads. Writing 10 significant digits keeps the committed files byte-identical across
+# machines; it is far more precision than the analysis uses.
+CSV_FLOAT_FORMAT = "%.10g"
+
+
+def write_csv(df, path) -> None:
+    """Write a data frame as CSV with a platform-stable float representation."""
+    df.to_csv(path, index=False, float_format=CSV_FLOAT_FORMAT)

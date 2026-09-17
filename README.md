@@ -308,7 +308,8 @@ Legacy scripts: `Rscript legacy/Code/Regression/q1a.r` (see [legacy/NOTES.md](le
 
 Continuous integration ([rebuild.yml](.github/workflows/rebuild.yml)) runs `make all` on a clean Ubuntu runner and
 fails if any committed table, the panel, the codebook or the README changes; figures are excluded because PNG
-bytes differ across platforms.
+bytes differ across platforms. Generated CSVs are written with 10 significant digits so that last-bit
+floating-point differences between machines do not change the committed bytes.
 
 **Extending the analysis.** Specifications are strings in `SPEC_RHS` in `R/00_setup.R` (add one and it appears
 in `R/03_main_models.R` automatically); outcomes are the `OUTCOMES` vector in the same file; a new panel column

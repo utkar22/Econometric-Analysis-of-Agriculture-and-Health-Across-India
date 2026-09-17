@@ -55,7 +55,7 @@ write_models_md(models, output = file.path(TABLES_DIR, "main_models.md"), coef_m
 
 tidy_all <- rbindlist(lapply(names(models), function(nm) as.data.table(tidy_fixest(models[[nm]]))[, model := nm]))
 tidy_all[, label := ifelse(is.na(COEF_MAP[term]), term, COEF_MAP[term])]
-fwrite(tidy_all, file.path(TABLES_DIR, "main_models_tidy.csv"))
+fwrite_stable(tidy_all, file.path(TABLES_DIR, "main_models_tidy.csv"))
 
 fit <- data.table(model = names(models), N = sapply(models, nobs),
                   states = sapply(models, function(m) uniqueN(d[obs(m)]$state)),

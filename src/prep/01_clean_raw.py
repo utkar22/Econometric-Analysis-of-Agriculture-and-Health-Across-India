@@ -10,7 +10,7 @@ constant within a district-year before collapsing.
 """
 import pandas as pd
 
-from common import PROC, RAW, SEASON_KEY, CATEGORY_KEY, log
+from common import PROC, RAW, SEASON_KEY, CATEGORY_KEY, log, write_csv
 
 KEYS = ["statelgdcode", "districtlgdcode", "year"]
 ANNUAL = ["state", "district", "sdyid"] + [f"v{i}" for i in range(1, 48)] + \
@@ -41,8 +41,8 @@ def main() -> None:
     log(f"district-years={len(dy)} districts={dy.districtlgdcode.nunique()} states={dy.state.nunique()}")
 
     PROC.mkdir(parents=True, exist_ok=True)
-    df[KEYS + CROP_COLS].to_csv(PROC / "crops_long.csv", index=False)
-    dy.to_csv(PROC / "district_year.csv", index=False)
+    write_csv(df[KEYS + CROP_COLS], PROC / "crops_long.csv")
+    write_csv(dy, PROC / "district_year.csv")
     log("wrote crops_long.csv, district_year.csv")
 
 

@@ -17,7 +17,7 @@ Output: data/processed/crops_wide.csv, one row per district-year with
 import numpy as np
 import pandas as pd
 
-from common import PROC, SEASON_KEY, CATEGORY_KEY, log
+from common import PROC, SEASON_KEY, CATEGORY_KEY, log, write_csv
 
 KEYS = ["statelgdcode", "districtlgdcode", "year"]
 SEASONS = list(SEASON_KEY.values())
@@ -77,7 +77,7 @@ def main() -> None:
         for cat in ("cash", "cereal"):
             col = f"yi_{season}_{cat}"
             log(f"  {col}: non-missing {wide[col].notna().mean():.1%}")
-    wide.to_csv(PROC / "crops_wide.csv", index=False)
+    write_csv(wide, PROC / "crops_wide.csv")
     log("wrote crops_wide.csv")
 
 
