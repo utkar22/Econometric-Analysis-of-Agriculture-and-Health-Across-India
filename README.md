@@ -1,5 +1,7 @@
 # Agriculture and infant health across Indian districts, 2011–2016
 
+[![rebuild](https://github.com/utkar22/Econometric-Analysis-of-Agriculture-and-Health-Across-India/actions/workflows/rebuild.yml/badge.svg)](https://github.com/utkar22/Econometric-Analysis-of-Agriculture-and-Health-Across-India/actions/workflows/rebuild.yml)
+
 An econometric analysis of the share of reported infant deaths attributed to low birth weight (LBW) across
 673 Indian districts and six years, against health-system indicators, crop yields, state economic variables and,
 in this revision, Census 2011, NFHS-4 and IMD rainfall data. The project started as coursework (Econometrics,
@@ -8,10 +10,17 @@ construction of its key variables, rebuilds the dataset as a reproducible pipeli
 R for estimation) and reports the results with fixed effects and clustered standard errors. The original scripts
 are preserved under `legacy/`; what was wrong with them and what changed is in [docs/REVIEW.md](docs/REVIEW.md).
 
-Contents: [Data](#data) · [Method](#method) · [Results](#results) · [Robustness](#robustness) ·
+Contents: [Data](#data) · [Method](#method) · [Results](#results) · [Findings](#findings) · [Robustness](#robustness) ·
 [What changed relative to the original analysis](#what-changed-relative-to-the-original-analysis) ·
 [Limitations](#limitations) · [How to run](#how-to-run) · [Repository layout](#repository-layout) ·
 [Authors and license](#authors-and-license)
+
+**Start here.** [docs/REVIEW.md](docs/REVIEW.md) explains what was wrong with the original analysis and what the
+corrected one shows; [data/processed/codebook.md](data/processed/codebook.md) defines every column of the panel;
+[data/external/SOURCES.md](data/external/SOURCES.md) records where the external data came from;
+[outputs/tables/join_report.md](outputs/tables/join_report.md) shows how well it joined; [legacy/NOTES.md](legacy/NOTES.md)
+maps the original coursework scripts to the two reports in `Reports/`
+([Project.pdf](Reports/Project.pdf), [Prelim Report 1.pdf](Reports/Prelim%20Report%201.pdf)).
 
 ## Data
 
@@ -192,6 +201,38 @@ Other causes of death (sepsis, pneumonia, diarrhoea, fever, measles) under the s
 
 ![Cause-of-death shares by year](outputs/figures/outcomes_by_year.png)
 
+## Findings
+
+Numbered as in the original report's "Our findings"; each point is read off the tables linked above.
+
+1. **Model fit is modest and was never high.** The original tables reported adjusted R² of 0.21 (Kharif) and
+   0.20 (Rabi). The corrected between-district models sit at 0.22–0.29 (M1b, M2, M4). The district fixed-effects
+   models reach 0.45–0.48, but their within-R² is below 0.02: the district effects, not the regressors, carry the
+   fit. These models describe which districts differ, not what changes a district's LBW share over time.
+2. **Richer states report a larger share of infant deaths attributed to low birth weight.** +6.5 points of v42 per
+   log point of state GDP per capita in M2 (bootstrap 95% CI 4.0 to 9.0), +5.8 in M4. The sign is the opposite of
+   a nutrition story and disappears with district effects; the plausible reading is cause-of-death attribution
+   improving with state capacity.
+3. **Higher rabi cereal yields go with a lower LBW share** (−1.5 points per tonne/ha in M2, CI −1.9 to −1.0; −1.1
+   in M4), with a positive offset of 5–7 points for districts that grow rabi cereals at all. This is the one
+   agricultural association that survives every specification short of district fixed effects.
+4. **Institutional deliveries keep the original report's positive sign**, but only in the year+zone model
+   (+0.07 per point, p < 0.01) and not once district effects are included. The original explanation
+   (institutional quality and reporting) remains the candidate.
+5. **District controls behave as the maternal-health literature predicts for the numerator, not the outcome:**
+   more women with BMI below 18.5 (+0.25 per point) and higher antenatal-care coverage (+0.09 per point) go with
+   a higher share of deaths attributed to LBW. Literacy, urbanisation and SC/ST share add nothing.
+6. **Within a district over time, nothing in the data moves the LBW share.** Yield shocks, the monsoon anomaly,
+   discharge timing, live-birth and low-weight rates are all indistinguishable from zero with district and year
+   effects (M3). The one marginal exception is the previous year's monsoon anomaly in M5 (+0.65, p = 0.04), a
+   single coefficient among many tested.
+7. **The original report's headline effects were artefacts.** Child marriage (−0.08, p < 0.001 originally) is
+   −0.01 with clustered errors; hospital beds (−3.9, p < 1e-8) is −2.8, p = 0.13; the Kharif cash-crop index
+   (−0.20, p < 1e-16) is −0.08 and not significant once the index is built per category and the nitrate sample
+   restriction is lifted. The "drop in child-marriage cases in 2014" is not in the data.
+8. **No causal claim.** Monsoon rainfall is too weak an instrument for yields at the state-year level
+   (clustered first-stage F = 2.3), so the yield associations stay associations.
+
 ## Robustness
 
 | Check | Result | Table |
@@ -265,6 +306,15 @@ only the R scripts; `make clean` removes the git-ignored intermediates; `make di
 `Rscript R/03_main_models.R`. The pipeline is deterministic (fixed seeds); a second run produces no diff.
 Legacy scripts: `Rscript legacy/Code/Regression/q1a.r` (see [legacy/NOTES.md](legacy/NOTES.md)).
 
+Continuous integration ([rebuild.yml](.github/workflows/rebuild.yml)) runs `make all` on a clean Ubuntu runner and
+fails if any committed table, the panel, the codebook or the README changes; figures are excluded because PNG
+bytes differ across platforms.
+
+**Extending the analysis.** Specifications are strings in `SPEC_RHS` in `R/00_setup.R` (add one and it appears
+in `R/03_main_models.R` automatically); outcomes are the `OUTCOMES` vector in the same file; a new panel column
+is added in `src/prep/04_build_panel.py` together with its codebook entry in the `DERIVED` or `EXTERNAL`
+dictionaries; a new external file is documented in `data/external/SOURCES.md`.
+
 ## Repository layout
 
 ```
@@ -277,7 +327,8 @@ R/                   00_setup (paths, specs, helpers) · 01_descriptives · 02_r
 outputs/tables/      generated markdown/csv tables     outputs/figures/   generated PNGs
 docs/REVIEW.md       review of the original analysis
 legacy/              original scripts (path fixes only), original README, screenshots, NOTES.md
-Reports/             the two course reports (PDF)
+Reports/             the two course reports (Project.pdf, Prelim Report 1.pdf)
+.github/workflows/   CI: rebuild and compare committed outputs
 ```
 
 ## Authors and license

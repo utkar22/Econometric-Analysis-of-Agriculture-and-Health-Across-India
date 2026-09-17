@@ -86,3 +86,22 @@ within-district changes in `v42` (within-R² < 0.02); the one-year-lagged monsoo
 marginal exception (+0.65, p = 0.04). The original report's headline effects of child marriage, hospital beds and
 the Kharif cash-crop index were products of the index construction and of iid standard errors on state-level
 regressors.
+
+## 6. Checks on the new pipeline (2026-09-17)
+
+Recomputed independently of the scripts on the merged `main`, all matching:
+
+- `yi_<season>_<cat>` equals the raw category index; `*_lag1` equals the previous year's value and only for
+  consecutive years; `yidev_*` averages to exactly 0 within district; `lyi_*_all` equals a hand-computed
+  area-weighted mean; `female_pct`, `log_tap`, `gdp_pc` (Bihar 2011 ≈ ₹23,700) and `child_marriage_per_mn`
+  recomputed by hand.
+- Census 2011 state totals equal the published figures for Uttar Pradesh, Maharashtra, Bihar, Kerala,
+  Telangana and Andhra Pradesh.
+- Rainfall anomalies: the 1981–2010 baseline has mean 0 and sd 0.98 by sub-division; Kerala 2016 recomputed
+  to four decimals. NFHS indicator numbers map to the intended descriptions in the lookup file.
+- `fixest` M2 equals `lm` with year and zone dummies to 1e-13; state-clustered standard errors equal
+  `sandwich::vcovCL` up to the small-sample factor (ratio 1.001); the manual VIF for v15 is 10.8 as tabulated;
+  the fractional-logit marginal-effect scale equals mean p(1 − p); trimming removes 38 rows above 60.19;
+  each bootstrap draw gets its own fixed effect (671 districts remain after trimming); the replication
+  script's assertions pass.
+- `make all` is byte-identical across two runs on macOS; the CI workflow repeats the comparison on Ubuntu.

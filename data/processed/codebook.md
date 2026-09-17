@@ -64,30 +64,30 @@ Only 13 of the 47 HMIS indicator columns (`v1`-`v47`) are documented in the proj
 | `tap` | District % households with tap water (hand-collected, single year) | 100% | 0 | 10.15 | 100 |
 | `child_marriage` | State reported child-marriage cases by year (data.gov.in) | 100% | 0 | 6 | 77 |
 | `nitrate` | State nitrate level in surface water by year (CPCB); NA for many state-years | 68% | 0 | 2.399 | 66.52 |
-| `lyi_kharif_cash` | log yield index: kharif season, cash crops; NA if not grown | 66% | -7.475 | 0.9899 | 5.106 |
-| `lyi_kharif_cereal` | log yield index: kharif season, cereal crops; NA if not grown | 97% | -6.213 | 0.6944 | 2.298 |
-| `lyi_kharif_coarse` | log yield index: kharif season, coarse crops; NA if not grown | 76% | -5.082 | -0.04291 | 2.022 |
-| `lyi_kharif_hort` | log yield index: kharif season, hort crops; NA if not grown | 68% | -5.025 | -0.4489 | 3.781 |
-| `lyi_kharif_oilseed` | log yield index: kharif season, oilseed crops; NA if not grown | 74% | -5.184 | 0 | 3.892 |
-| `lyi_kharif_pulse` | log yield index: kharif season, pulse crops; NA if not grown | 88% | -4.973 | -0.4389 | 2.323 |
-| `lyi_rabi_cash` | log yield index: rabi season, cash crops; NA if not grown | 32% | -6.326 | 0.2016 | 4.711 |
-| `lyi_rabi_cereal` | log yield index: rabi season, cereal crops; NA if not grown | 96% | -4.215 | 0.8519 | 2.248 |
-| `lyi_rabi_coarse` | log yield index: rabi season, coarse crops; NA if not grown | 56% | -3.458 | 0.2899 | 1.959 |
-| `lyi_rabi_hort` | log yield index: rabi season, hort crops; NA if not grown | 58% | -3.463 | 1.906 | 5.617 |
-| `lyi_rabi_oilseed` | log yield index: rabi season, oilseed crops; NA if not grown | 89% | -5.541 | -0.1719 | 2.14 |
-| `lyi_rabi_pulse` | log yield index: rabi season, pulse crops; NA if not grown | 91% | -5.095 | -0.229 | 1.828 |
-| `lyi_summer_cash` | log yield index: summer season, cash crops; NA if not grown | 2% | -0.4055 | 0.6931 | 1.386 |
-| `lyi_summer_cereal` | log yield index: summer season, cereal crops; NA if not grown | 40% | -11.56 | 0.8908 | 2.022 |
-| `lyi_summer_coarse` | log yield index: summer season, coarse crops; NA if not grown | 10% | -1.609 | 0.6125 | 1.296 |
-| `lyi_summer_hort` | log yield index: summer season, hort crops; NA if not grown | 23% | -2.303 | 1.387 | 5.46 |
-| `lyi_summer_oilseed` | log yield index: summer season, oilseed crops; NA if not grown | 24% | -2.079 | 0.342 | 1.314 |
-| `lyi_summer_pulse` | log yield index: summer season, pulse crops; NA if not grown | 29% | -2.441 | -0.5849 | 2.454 |
-| `lyi_wholeyear_cash` | log yield index: wholeyear season, cash crops; NA if not grown | 62% | -1.015 | 3.967 | 5.455 |
-| `lyi_wholeyear_cereal` | log yield index: wholeyear season, cereal crops; NA if not grown | 1% | -2.691 | 0.637 | 1.196 |
-| `lyi_wholeyear_coarse` | log yield index: wholeyear season, coarse crops; NA if not grown | 5% | -4.431 | -0.1865 | 1.001 |
-| `lyi_wholeyear_hort` | log yield index: wholeyear season, hort crops; NA if not grown | 53% | -3.299 | 1.44 | 5.74 |
-| `lyi_wholeyear_oilseed` | log yield index: wholeyear season, oilseed crops; NA if not grown | 4% | -2.878 | -0.3185 | 0.7437 |
-| `lyi_wholeyear_pulse` | log yield index: wholeyear season, pulse crops; NA if not grown | 14% | -6.18 | -0.4792 | 3.689 |
+| `lyi_kharif_cash` | log yield index: kharif season, cash crops; NA if not grown or if the raw index is 0 | 66% | -7.475 | 0.9899 | 5.106 |
+| `lyi_kharif_cereal` | log yield index: kharif season, cereal crops; NA if not grown or if the raw index is 0 | 97% | -6.213 | 0.6944 | 2.298 |
+| `lyi_kharif_coarse` | log yield index: kharif season, coarse crops; NA if not grown or if the raw index is 0 | 76% | -5.082 | -0.04291 | 2.022 |
+| `lyi_kharif_hort` | log yield index: kharif season, hort crops; NA if not grown or if the raw index is 0 | 68% | -5.025 | -0.4489 | 3.781 |
+| `lyi_kharif_oilseed` | log yield index: kharif season, oilseed crops; NA if not grown or if the raw index is 0 | 74% | -5.184 | 0 | 3.892 |
+| `lyi_kharif_pulse` | log yield index: kharif season, pulse crops; NA if not grown or if the raw index is 0 | 88% | -4.973 | -0.4389 | 2.323 |
+| `lyi_rabi_cash` | log yield index: rabi season, cash crops; NA if not grown or if the raw index is 0 | 32% | -6.326 | 0.2016 | 4.711 |
+| `lyi_rabi_cereal` | log yield index: rabi season, cereal crops; NA if not grown or if the raw index is 0 | 96% | -4.215 | 0.8519 | 2.248 |
+| `lyi_rabi_coarse` | log yield index: rabi season, coarse crops; NA if not grown or if the raw index is 0 | 56% | -3.458 | 0.2899 | 1.959 |
+| `lyi_rabi_hort` | log yield index: rabi season, hort crops; NA if not grown or if the raw index is 0 | 58% | -3.463 | 1.906 | 5.617 |
+| `lyi_rabi_oilseed` | log yield index: rabi season, oilseed crops; NA if not grown or if the raw index is 0 | 89% | -5.541 | -0.1719 | 2.14 |
+| `lyi_rabi_pulse` | log yield index: rabi season, pulse crops; NA if not grown or if the raw index is 0 | 91% | -5.095 | -0.229 | 1.828 |
+| `lyi_summer_cash` | log yield index: summer season, cash crops; NA if not grown or if the raw index is 0 | 2% | -0.4055 | 0.6931 | 1.386 |
+| `lyi_summer_cereal` | log yield index: summer season, cereal crops; NA if not grown or if the raw index is 0 | 40% | -11.56 | 0.8908 | 2.022 |
+| `lyi_summer_coarse` | log yield index: summer season, coarse crops; NA if not grown or if the raw index is 0 | 10% | -1.609 | 0.6125 | 1.296 |
+| `lyi_summer_hort` | log yield index: summer season, hort crops; NA if not grown or if the raw index is 0 | 23% | -2.303 | 1.387 | 5.46 |
+| `lyi_summer_oilseed` | log yield index: summer season, oilseed crops; NA if not grown or if the raw index is 0 | 24% | -2.079 | 0.342 | 1.314 |
+| `lyi_summer_pulse` | log yield index: summer season, pulse crops; NA if not grown or if the raw index is 0 | 29% | -2.441 | -0.5849 | 2.454 |
+| `lyi_wholeyear_cash` | log yield index: wholeyear season, cash crops; NA if not grown or if the raw index is 0 | 62% | -1.015 | 3.967 | 5.455 |
+| `lyi_wholeyear_cereal` | log yield index: wholeyear season, cereal crops; NA if not grown or if the raw index is 0 | 1% | -2.691 | 0.637 | 1.196 |
+| `lyi_wholeyear_coarse` | log yield index: wholeyear season, coarse crops; NA if not grown or if the raw index is 0 | 5% | -4.431 | -0.1865 | 1.001 |
+| `lyi_wholeyear_hort` | log yield index: wholeyear season, hort crops; NA if not grown or if the raw index is 0 | 53% | -3.299 | 1.44 | 5.74 |
+| `lyi_wholeyear_oilseed` | log yield index: wholeyear season, oilseed crops; NA if not grown or if the raw index is 0 | 4% | -2.878 | -0.3185 | 0.7437 |
+| `lyi_wholeyear_pulse` | log yield index: wholeyear season, pulse crops; NA if not grown or if the raw index is 0 | 14% | -6.18 | -0.4792 | 3.689 |
 | `yi_kharif_cash_lag1` | Yield index (tonnes/ha) (previous year): kharif season, cash crops; NA if not grown | 50% | 0 | 2.602 | 165 |
 | `yi_kharif_cereal_lag1` | Yield index (tonnes/ha) (previous year): kharif season, cereal crops; NA if not grown | 75% | 0.01609 | 1.968 | 9.95 |
 | `yi_kharif_coarse_lag1` | Yield index (tonnes/ha) (previous year): kharif season, coarse crops; NA if not grown | 57% | 0 | 0.9677 | 7.553 |
@@ -112,30 +112,30 @@ Only 13 of the 47 HMIS indicator columns (`v1`-`v47`) are documented in the proj
 | `yi_wholeyear_hort_lag1` | Yield index (tonnes/ha) (previous year): wholeyear season, hort crops; NA if not grown | 40% | 0 | 4.239 | 311 |
 | `yi_wholeyear_oilseed_lag1` | Yield index (tonnes/ha) (previous year): wholeyear season, oilseed crops; NA if not grown | 1% | 0 | 1.126 | 1.532 |
 | `yi_wholeyear_pulse_lag1` | Yield index (tonnes/ha) (previous year): wholeyear season, pulse crops; NA if not grown | 9% | 0 | 0.6183 | 40 |
-| `yidev_kharif_cash` | Yield shock: log index minus district 2011-16 mean: kharif season, cash crops; NA if not grown | 63% | -3.865 | 0.01547 | 2.668 |
-| `yidev_kharif_cereal` | Yield shock: log index minus district 2011-16 mean: kharif season, cereal crops; NA if not grown | 96% | -5.472 | 0.01097 | 2.028 |
-| `yidev_kharif_coarse` | Yield shock: log index minus district 2011-16 mean: kharif season, coarse crops; NA if not grown | 73% | -2.435 | 0.006665 | 1.721 |
-| `yidev_kharif_hort` | Yield shock: log index minus district 2011-16 mean: kharif season, hort crops; NA if not grown | 65% | -3.159 | 0.006768 | 4.054 |
-| `yidev_kharif_oilseed` | Yield shock: log index minus district 2011-16 mean: kharif season, oilseed crops; NA if not grown | 72% | -3.762 | 0.01304 | 2.803 |
-| `yidev_kharif_pulse` | Yield shock: log index minus district 2011-16 mean: kharif season, pulse crops; NA if not grown | 85% | -2.826 | 0.01291 | 2.13 |
-| `yidev_rabi_cash` | Yield shock: log index minus district 2011-16 mean: rabi season, cash crops; NA if not grown | 29% | -4.887 | 0.000246 | 2.125 |
-| `yidev_rabi_cereal` | Yield shock: log index minus district 2011-16 mean: rabi season, cereal crops; NA if not grown | 94% | -2.204 | 0.01238 | 1.921 |
-| `yidev_rabi_coarse` | Yield shock: log index minus district 2011-16 mean: rabi season, coarse crops; NA if not grown | 53% | -2.318 | 0.01455 | 1.816 |
-| `yidev_rabi_hort` | Yield shock: log index minus district 2011-16 mean: rabi season, hort crops; NA if not grown | 55% | -3.28 | 0.002733 | 3.324 |
-| `yidev_rabi_oilseed` | Yield shock: log index minus district 2011-16 mean: rabi season, oilseed crops; NA if not grown | 87% | -3.158 | 0.007447 | 1.978 |
-| `yidev_rabi_pulse` | Yield shock: log index minus district 2011-16 mean: rabi season, pulse crops; NA if not grown | 90% | -2.81 | 0.01449 | 1.879 |
-| `yidev_summer_cash` | Yield shock: log index minus district 2011-16 mean: summer season, cash crops; NA if not grown | 1% | -0.4638 | 0.05579 | 0.3612 |
-| `yidev_summer_cereal` | Yield shock: log index minus district 2011-16 mean: summer season, cereal crops; NA if not grown | 39% | -9.838 | 0.01166 | 2.412 |
-| `yidev_summer_coarse` | Yield shock: log index minus district 2011-16 mean: summer season, coarse crops; NA if not grown | 9% | -0.8861 | 0.01046 | 0.5523 |
-| `yidev_summer_hort` | Yield shock: log index minus district 2011-16 mean: summer season, hort crops; NA if not grown | 21% | -2.624 | 0.001893 | 4.61 |
-| `yidev_summer_oilseed` | Yield shock: log index minus district 2011-16 mean: summer season, oilseed crops; NA if not grown | 22% | -1.801 | 0.01226 | 0.9777 |
-| `yidev_summer_pulse` | Yield shock: log index minus district 2011-16 mean: summer season, pulse crops; NA if not grown | 27% | -1.215 | -0.01177 | 2.873 |
-| `yidev_wholeyear_cash` | Yield shock: log index minus district 2011-16 mean: wholeyear season, cash crops; NA if not grown | 59% | -3.068 | 0.01597 | 2.379 |
-| `yidev_wholeyear_cereal` | Yield shock: log index minus district 2011-16 mean: wholeyear season, cereal crops; NA if not grown | 1% | -2.218 | 0.02397 | 0.8008 |
-| `yidev_wholeyear_coarse` | Yield shock: log index minus district 2011-16 mean: wholeyear season, coarse crops; NA if not grown | 3% | -0.7638 | -0.02945 | 0.756 |
-| `yidev_wholeyear_hort` | Yield shock: log index minus district 2011-16 mean: wholeyear season, hort crops; NA if not grown | 50% | -3.491 | 0.0167 | 2.012 |
-| `yidev_wholeyear_oilseed` | Yield shock: log index minus district 2011-16 mean: wholeyear season, oilseed crops; NA if not grown | 1% | -0.6556 | -0.007501 | 0.6876 |
-| `yidev_wholeyear_pulse` | Yield shock: log index minus district 2011-16 mean: wholeyear season, pulse crops; NA if not grown | 10% | -1.566 | 0.01882 | 2.812 |
+| `yidev_kharif_cash` | Yield shock: log index minus district 2011-16 mean: kharif season, cash crops; NA if not grown or if the raw index is 0 | 63% | -3.865 | 0.01547 | 2.668 |
+| `yidev_kharif_cereal` | Yield shock: log index minus district 2011-16 mean: kharif season, cereal crops; NA if not grown or if the raw index is 0 | 96% | -5.472 | 0.01097 | 2.028 |
+| `yidev_kharif_coarse` | Yield shock: log index minus district 2011-16 mean: kharif season, coarse crops; NA if not grown or if the raw index is 0 | 73% | -2.435 | 0.006665 | 1.721 |
+| `yidev_kharif_hort` | Yield shock: log index minus district 2011-16 mean: kharif season, hort crops; NA if not grown or if the raw index is 0 | 65% | -3.159 | 0.006768 | 4.054 |
+| `yidev_kharif_oilseed` | Yield shock: log index minus district 2011-16 mean: kharif season, oilseed crops; NA if not grown or if the raw index is 0 | 72% | -3.762 | 0.01304 | 2.803 |
+| `yidev_kharif_pulse` | Yield shock: log index minus district 2011-16 mean: kharif season, pulse crops; NA if not grown or if the raw index is 0 | 85% | -2.826 | 0.01291 | 2.13 |
+| `yidev_rabi_cash` | Yield shock: log index minus district 2011-16 mean: rabi season, cash crops; NA if not grown or if the raw index is 0 | 29% | -4.887 | 0.000246 | 2.125 |
+| `yidev_rabi_cereal` | Yield shock: log index minus district 2011-16 mean: rabi season, cereal crops; NA if not grown or if the raw index is 0 | 94% | -2.204 | 0.01238 | 1.921 |
+| `yidev_rabi_coarse` | Yield shock: log index minus district 2011-16 mean: rabi season, coarse crops; NA if not grown or if the raw index is 0 | 53% | -2.318 | 0.01455 | 1.816 |
+| `yidev_rabi_hort` | Yield shock: log index minus district 2011-16 mean: rabi season, hort crops; NA if not grown or if the raw index is 0 | 55% | -3.28 | 0.002733 | 3.324 |
+| `yidev_rabi_oilseed` | Yield shock: log index minus district 2011-16 mean: rabi season, oilseed crops; NA if not grown or if the raw index is 0 | 87% | -3.158 | 0.007447 | 1.978 |
+| `yidev_rabi_pulse` | Yield shock: log index minus district 2011-16 mean: rabi season, pulse crops; NA if not grown or if the raw index is 0 | 90% | -2.81 | 0.01449 | 1.879 |
+| `yidev_summer_cash` | Yield shock: log index minus district 2011-16 mean: summer season, cash crops; NA if not grown or if the raw index is 0 | 1% | -0.4638 | 0.05579 | 0.3612 |
+| `yidev_summer_cereal` | Yield shock: log index minus district 2011-16 mean: summer season, cereal crops; NA if not grown or if the raw index is 0 | 39% | -9.838 | 0.01166 | 2.412 |
+| `yidev_summer_coarse` | Yield shock: log index minus district 2011-16 mean: summer season, coarse crops; NA if not grown or if the raw index is 0 | 9% | -0.8861 | 0.01046 | 0.5523 |
+| `yidev_summer_hort` | Yield shock: log index minus district 2011-16 mean: summer season, hort crops; NA if not grown or if the raw index is 0 | 21% | -2.624 | 0.001893 | 4.61 |
+| `yidev_summer_oilseed` | Yield shock: log index minus district 2011-16 mean: summer season, oilseed crops; NA if not grown or if the raw index is 0 | 22% | -1.801 | 0.01226 | 0.9777 |
+| `yidev_summer_pulse` | Yield shock: log index minus district 2011-16 mean: summer season, pulse crops; NA if not grown or if the raw index is 0 | 27% | -1.215 | -0.01177 | 2.873 |
+| `yidev_wholeyear_cash` | Yield shock: log index minus district 2011-16 mean: wholeyear season, cash crops; NA if not grown or if the raw index is 0 | 59% | -3.068 | 0.01597 | 2.379 |
+| `yidev_wholeyear_cereal` | Yield shock: log index minus district 2011-16 mean: wholeyear season, cereal crops; NA if not grown or if the raw index is 0 | 1% | -2.218 | 0.02397 | 0.8008 |
+| `yidev_wholeyear_coarse` | Yield shock: log index minus district 2011-16 mean: wholeyear season, coarse crops; NA if not grown or if the raw index is 0 | 3% | -0.7638 | -0.02945 | 0.756 |
+| `yidev_wholeyear_hort` | Yield shock: log index minus district 2011-16 mean: wholeyear season, hort crops; NA if not grown or if the raw index is 0 | 50% | -3.491 | 0.0167 | 2.012 |
+| `yidev_wholeyear_oilseed` | Yield shock: log index minus district 2011-16 mean: wholeyear season, oilseed crops; NA if not grown or if the raw index is 0 | 1% | -0.6556 | -0.007501 | 0.6876 |
+| `yidev_wholeyear_pulse` | Yield shock: log index minus district 2011-16 mean: wholeyear season, pulse crops; NA if not grown or if the raw index is 0 | 10% | -1.566 | 0.01882 | 2.812 |
 | `yi_kharif_cash` | Yield index (tonnes/ha): kharif season, cash crops; NA if not grown | 66% | 0 | 2.654 | 165 |
 | `yi_kharif_cereal` | Yield index (tonnes/ha): kharif season, cereal crops; NA if not grown | 97% | 0 | 2.002 | 9.95 |
 | `yi_kharif_coarse` | Yield index (tonnes/ha): kharif season, coarse crops; NA if not grown | 76% | 0 | 0.9556 | 7.553 |
@@ -160,38 +160,38 @@ Only 13 of the 47 HMIS indicator columns (`v1`-`v47`) are documented in the proj
 | `yi_wholeyear_hort` | Yield index (tonnes/ha): wholeyear season, hort crops; NA if not grown | 53% | 0 | 4.214 | 311 |
 | `yi_wholeyear_oilseed` | Yield index (tonnes/ha): wholeyear season, oilseed crops; NA if not grown | 4% | 0 | 0.7066 | 2.104 |
 | `yi_wholeyear_pulse` | Yield index (tonnes/ha): wholeyear season, pulse crops; NA if not grown | 15% | 0 | 0.6105 | 40 |
-| `yigr_kharif_cash` | log yield growth vs previous year: kharif season, cash crops; NA if not grown | 49% | -4.652 | 0.01004 | 4.103 |
-| `yigr_kharif_cereal` | log yield growth vs previous year: kharif season, cereal crops; NA if not grown | 75% | -7.17 | 0.023 | 2.507 |
-| `yigr_kharif_coarse` | log yield growth vs previous year: kharif season, coarse crops; NA if not grown | 57% | -2.855 | 0 | 2.88 |
-| `yigr_kharif_hort` | log yield growth vs previous year: kharif season, hort crops; NA if not grown | 49% | -5.123 | 0.01683 | 4.926 |
-| `yigr_kharif_oilseed` | log yield growth vs previous year: kharif season, oilseed crops; NA if not grown | 57% | -4.438 | 0.002329 | 4.545 |
-| `yigr_kharif_pulse` | log yield growth vs previous year: kharif season, pulse crops; NA if not grown | 67% | -3.286 | 0.02598 | 4.224 |
-| `yigr_rabi_cash` | log yield growth vs previous year: rabi season, cash crops; NA if not grown | 21% | -5.637 | 0.009292 | 5.384 |
-| `yigr_rabi_cereal` | log yield growth vs previous year: rabi season, cereal crops; NA if not grown | 73% | -2.753 | 0.01566 | 2.858 |
-| `yigr_rabi_coarse` | log yield growth vs previous year: rabi season, coarse crops; NA if not grown | 39% | -3.039 | 0.006806 | 2.229 |
-| `yigr_rabi_hort` | log yield growth vs previous year: rabi season, hort crops; NA if not grown | 43% | -3.872 | 0.000858 | 6.821 |
-| `yigr_rabi_oilseed` | log yield growth vs previous year: rabi season, oilseed crops; NA if not grown | 66% | -2.97 | 0.007102 | 5.136 |
-| `yigr_rabi_pulse` | log yield growth vs previous year: rabi season, pulse crops; NA if not grown | 70% | -3.186 | 0.02469 | 2.796 |
-| `yigr_summer_cash` | log yield growth vs previous year: summer season, cash crops; NA if not grown | 1% | -0.6458 | 0.1119 | 0.4055 |
-| `yigr_summer_cereal` | log yield growth vs previous year: summer season, cereal crops; NA if not grown | 29% | -11.78 | 0.01048 | 11.62 |
-| `yigr_summer_coarse` | log yield growth vs previous year: summer season, coarse crops; NA if not grown | 7% | -0.9194 | 0 | 2.233 |
-| `yigr_summer_hort` | log yield growth vs previous year: summer season, hort crops; NA if not grown | 16% | -5.833 | 0.00444 | 4.85 |
-| `yigr_summer_oilseed` | log yield growth vs previous year: summer season, oilseed crops; NA if not grown | 18% | -1.769 | 0.003605 | 2.251 |
-| `yigr_summer_pulse` | log yield growth vs previous year: summer season, pulse crops; NA if not grown | 20% | -3.686 | 0.03704 | 1.386 |
-| `yigr_wholeyear_cash` | log yield growth vs previous year: wholeyear season, cash crops; NA if not grown | 46% | -3.489 | 0.003323 | 4.118 |
-| `yigr_wholeyear_cereal` | log yield growth vs previous year: wholeyear season, cereal crops; NA if not grown | 1% | -0.3277 | 0.0272 | 3.019 |
-| `yigr_wholeyear_coarse` | log yield growth vs previous year: wholeyear season, coarse crops; NA if not grown | 2% | -0.4055 | 0.2569 | 1.346 |
-| `yigr_wholeyear_hort` | log yield growth vs previous year: wholeyear season, hort crops; NA if not grown | 40% | -4.168 | 0.01811 | 4.55 |
-| `yigr_wholeyear_oilseed` | log yield growth vs previous year: wholeyear season, oilseed crops; NA if not grown | 1% | -0.6926 | 0 | 1.343 |
-| `yigr_wholeyear_pulse` | log yield growth vs previous year: wholeyear season, pulse crops; NA if not grown | 8% | -3.689 | -0.009627 | 3.689 |
-| `lyi_kharif_all` | log yield index: kharif season, all categories, area-weighted; NA if not grown | 99% | -6.21 | 0.5011 | 4.167 |
-| `yidev_kharif_all` | Yield shock: log index minus district 2011-16 mean: kharif season, all categories, area-weighted; NA if not grown | 98% | -5.469 | 0.01223 | 2.024 |
-| `lyi_rabi_all` | log yield index: rabi season, all categories, area-weighted; NA if not grown | 99% | -5.112 | 0.5056 | 3.288 |
-| `yidev_rabi_all` | Yield shock: log index minus district 2011-16 mean: rabi season, all categories, area-weighted; NA if not grown | 97% | -2.252 | 0.01383 | 1.767 |
-| `lyi_wholeyear_all` | log yield index: wholeyear season, all categories, area-weighted; NA if not grown | 75% | -3.299 | 2.161 | 5.656 |
-| `yidev_wholeyear_all` | Yield shock: log index minus district 2011-16 mean: wholeyear season, all categories, area-weighted; NA if not grown | 72% | -3.068 | 0.0249 | 1.974 |
-| `lyi_summer_all` | log yield index: summer season, all categories, area-weighted; NA if not grown | 46% | -11.56 | 0.6454 | 2.708 |
-| `yidev_summer_all` | Yield shock: log index minus district 2011-16 mean: summer season, all categories, area-weighted; NA if not grown | 45% | -9.837 | 0.008 | 2.412 |
+| `yigr_kharif_cash` | log yield growth vs previous year: kharif season, cash crops; NA if not grown or if the raw index is 0 | 49% | -4.652 | 0.01004 | 4.103 |
+| `yigr_kharif_cereal` | log yield growth vs previous year: kharif season, cereal crops; NA if not grown or if the raw index is 0 | 75% | -7.17 | 0.023 | 2.507 |
+| `yigr_kharif_coarse` | log yield growth vs previous year: kharif season, coarse crops; NA if not grown or if the raw index is 0 | 57% | -2.855 | 0 | 2.88 |
+| `yigr_kharif_hort` | log yield growth vs previous year: kharif season, hort crops; NA if not grown or if the raw index is 0 | 49% | -5.123 | 0.01683 | 4.926 |
+| `yigr_kharif_oilseed` | log yield growth vs previous year: kharif season, oilseed crops; NA if not grown or if the raw index is 0 | 57% | -4.438 | 0.002329 | 4.545 |
+| `yigr_kharif_pulse` | log yield growth vs previous year: kharif season, pulse crops; NA if not grown or if the raw index is 0 | 67% | -3.286 | 0.02598 | 4.224 |
+| `yigr_rabi_cash` | log yield growth vs previous year: rabi season, cash crops; NA if not grown or if the raw index is 0 | 21% | -5.637 | 0.009292 | 5.384 |
+| `yigr_rabi_cereal` | log yield growth vs previous year: rabi season, cereal crops; NA if not grown or if the raw index is 0 | 73% | -2.753 | 0.01566 | 2.858 |
+| `yigr_rabi_coarse` | log yield growth vs previous year: rabi season, coarse crops; NA if not grown or if the raw index is 0 | 39% | -3.039 | 0.006806 | 2.229 |
+| `yigr_rabi_hort` | log yield growth vs previous year: rabi season, hort crops; NA if not grown or if the raw index is 0 | 43% | -3.872 | 0.000858 | 6.821 |
+| `yigr_rabi_oilseed` | log yield growth vs previous year: rabi season, oilseed crops; NA if not grown or if the raw index is 0 | 66% | -2.97 | 0.007102 | 5.136 |
+| `yigr_rabi_pulse` | log yield growth vs previous year: rabi season, pulse crops; NA if not grown or if the raw index is 0 | 70% | -3.186 | 0.02469 | 2.796 |
+| `yigr_summer_cash` | log yield growth vs previous year: summer season, cash crops; NA if not grown or if the raw index is 0 | 1% | -0.6458 | 0.1119 | 0.4055 |
+| `yigr_summer_cereal` | log yield growth vs previous year: summer season, cereal crops; NA if not grown or if the raw index is 0 | 29% | -11.78 | 0.01048 | 11.62 |
+| `yigr_summer_coarse` | log yield growth vs previous year: summer season, coarse crops; NA if not grown or if the raw index is 0 | 7% | -0.9194 | 0 | 2.233 |
+| `yigr_summer_hort` | log yield growth vs previous year: summer season, hort crops; NA if not grown or if the raw index is 0 | 16% | -5.833 | 0.00444 | 4.85 |
+| `yigr_summer_oilseed` | log yield growth vs previous year: summer season, oilseed crops; NA if not grown or if the raw index is 0 | 18% | -1.769 | 0.003605 | 2.251 |
+| `yigr_summer_pulse` | log yield growth vs previous year: summer season, pulse crops; NA if not grown or if the raw index is 0 | 20% | -3.686 | 0.03704 | 1.386 |
+| `yigr_wholeyear_cash` | log yield growth vs previous year: wholeyear season, cash crops; NA if not grown or if the raw index is 0 | 46% | -3.489 | 0.003323 | 4.118 |
+| `yigr_wholeyear_cereal` | log yield growth vs previous year: wholeyear season, cereal crops; NA if not grown or if the raw index is 0 | 1% | -0.3277 | 0.0272 | 3.019 |
+| `yigr_wholeyear_coarse` | log yield growth vs previous year: wholeyear season, coarse crops; NA if not grown or if the raw index is 0 | 2% | -0.4055 | 0.2569 | 1.346 |
+| `yigr_wholeyear_hort` | log yield growth vs previous year: wholeyear season, hort crops; NA if not grown or if the raw index is 0 | 40% | -4.168 | 0.01811 | 4.55 |
+| `yigr_wholeyear_oilseed` | log yield growth vs previous year: wholeyear season, oilseed crops; NA if not grown or if the raw index is 0 | 1% | -0.6926 | 0 | 1.343 |
+| `yigr_wholeyear_pulse` | log yield growth vs previous year: wholeyear season, pulse crops; NA if not grown or if the raw index is 0 | 8% | -3.689 | -0.009627 | 3.689 |
+| `lyi_kharif_all` | log yield index: kharif season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 99% | -6.21 | 0.5011 | 4.167 |
+| `yidev_kharif_all` | Yield shock: log index minus district 2011-16 mean: kharif season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 98% | -5.469 | 0.01223 | 2.024 |
+| `lyi_rabi_all` | log yield index: rabi season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 99% | -5.112 | 0.5056 | 3.288 |
+| `yidev_rabi_all` | Yield shock: log index minus district 2011-16 mean: rabi season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 97% | -2.252 | 0.01383 | 1.767 |
+| `lyi_wholeyear_all` | log yield index: wholeyear season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 75% | -3.299 | 2.161 | 5.656 |
+| `yidev_wholeyear_all` | Yield shock: log index minus district 2011-16 mean: wholeyear season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 72% | -3.068 | 0.0249 | 1.974 |
+| `lyi_summer_all` | log yield index: summer season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 46% | -11.56 | 0.6454 | 2.708 |
+| `yidev_summer_all` | Yield shock: log index minus district 2011-16 mean: summer season, all categories, area-weighted; NA if not grown or if the raw index is 0 | 45% | -9.837 | 0.008 | 2.412 |
 | `area_total` | Sum of category-season areas (ha), all seasons pooled (gross cropped area proxy) | 100% | 119 | 1.903e+05 | 1.992e+06 |
 | `share_foodgrain_area` | Share of area under foodgrain (RBI category) vs commercial crops | 100% | 0 | 0.8264 | 1 |
 | `n_categories` | Number of crop categories grown (any season) | 100% | 1 | 6 | 6 |

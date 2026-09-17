@@ -30,5 +30,5 @@
 | M3 | yidev_kharif_all | Kharif yield shock (log dev.) | 0.4352 | 0.8151 | -0.9217 | 2.166 | 0.8636 | no |
 | M3 | yidev_rabi_all | Rabi yield shock (log dev.) | -0.5666 | 0.8052 | -2.305 | 0.9331 | 0.491 | no |
 
-Districts are resampled with replacement; in M3 each drawn copy gets its own fixed effect.
+The 671 districts in the trimmed sample are resampled with replacement (999 draws); in M3 each drawn copy gets its own fixed effect.
 This replaces the legacy monte_carlo.R, which dropped 20% of rows at random and compared mean coefficients without intervals.

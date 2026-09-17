@@ -6,7 +6,7 @@ crop row happened to come first in the CSV) with explicit per-season, per-catego
 
 Output: data/processed/crops_wide.csv, one row per district-year with
   yi_<season>_<cat>        yield index (tonnes/ha) of that category in that season; NA if not grown
-  lyi_<season>_<cat>       log yield index (NA when index is 0)
+  lyi_<season>_<cat>       log yield index (NA when not grown or when the index is 0: 261 raw rows)
   yidev_<season>_<cat>     log index minus the district's own 2011-16 mean log index (within-district shock)
   yi_<season>_<cat>_lag1   previous year's yield index (same district/season/category)
   yigr_<season>_<cat>      log growth vs previous year

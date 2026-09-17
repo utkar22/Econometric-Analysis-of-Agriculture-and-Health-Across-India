@@ -19,11 +19,11 @@ were attached to the source file (state/district name matching, positional colum
 
 | Report | Question | Script | Output |
 |---|---|---|---|
-| Prelim Report 1 (Data Assignment 1) | Q2a descriptive statistics | `Code/central_tendency.r` | mean/median/mode/sd of v40–v46 |
+| `Reports/Prelim Report 1.pdf` (Data Assignment 1) | Q2a descriptive statistics | `Code/central_tendency.r` | mean/median/mode/sd of v40–v46 |
 | | Q2b histograms by year / season | `Code/Graphs/Q2B4*Y.R`, `Q2B4*S.R`, `q2b.R` | `Outputs/Histogram/*.png` |
 | | Q2d correlations | `Code/Correlation Analysis/q2d1.r`, `q2d2.R`, `q2d3.R` | correlation tables |
 | | Q3a–g fever regressions | `Code/Regression/q3a.R` … `q3g.R` | `Outputs/Regression/mod-*.png` |
-| Data Assignment 2 / Project.pdf | Q1a main LBW model, Kharif and Rabi | `Code/Regression/q1a.r` | README tables (see note below) |
+| Data Assignment 2 / `Reports/Project.pdf` | Q1a main LBW model, Kharif and Rabi | `Code/Regression/q1a.r` | README tables (see note below) |
 | | Q1b–d residual plots | `Code/Graphs/q1bcd.R` | |
 | | zone dummies and ANOVA | `Code/ANOVA.R` | |
 | | before/after 2014 | `Code/Correlation Analysis/before_after.r` | |

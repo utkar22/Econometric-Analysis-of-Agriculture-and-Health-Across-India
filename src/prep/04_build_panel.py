@@ -67,7 +67,8 @@ def crop_descriptions(cols):
             season, cat = parts[1], parts[2]
             lag = " (previous year)" if c.endswith("_lag1") else ""
             what = "all categories, area-weighted" if cat == "all" else f"{cat} crops"
-            out[c] = f"{kind}{lag}: {season} season, {what}; NA if not grown"
+            na = "NA if not grown" if parts[0] == "yi" else "NA if not grown or if the raw index is 0"
+            out[c] = f"{kind}{lag}: {season} season, {what}; {na}"
     out.update({"area_total": "Sum of category-season areas (ha), all seasons pooled (gross cropped area proxy)",
                 "share_foodgrain_area": "Share of area under foodgrain (RBI category) vs commercial crops",
                 "n_categories": "Number of crop categories grown (any season)",

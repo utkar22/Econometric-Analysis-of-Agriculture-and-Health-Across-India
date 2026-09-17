@@ -69,7 +69,7 @@ bt[, `:=`(label = ifelse(is.na(COEF_MAP[term]), term, COEF_MAP[term]),
 setcolorder(bt, c("model", "term", "label"))
 write_md_table(bt, file.path(TABLES_DIR, "robustness_bootstrap.md"), digits = 4,
                title = "District cluster bootstrap (999 resamples of districts with replacement): percentile 95% CIs vs state-clustered SEs",
-               notes = c("Districts are resampled with replacement; in M3 each drawn copy gets its own fixed effect.",
+               notes = c(sprintf("The %d districts in the trimmed sample are resampled with replacement (999 draws); in M3 each drawn copy gets its own fixed effect.", uniqueN(d$districtlgdcode)),
                          "This replaces the legacy monte_carlo.R, which dropped 20% of rows at random and compared mean coefficients without intervals."))
 
 # (d) 2014 structural break ------------------------------------------------------------------------------

@@ -94,11 +94,10 @@ def rainfall(states: pd.DataFrame) -> pd.DataFrame:
     r = pd.read_csv(EXT / "imd_subdivision_rainfall_1901_2017.csv")
     r = r.rename(columns={"SUBDIVISION": "subdivision", "YEAR": "year", "ANNUAL": "rain_annual", "June-September": "rain_jjas"})
     base = r[(r.year >= 1981) & (r.year <= 2010)].groupby("subdivision")[["rain_annual", "rain_jjas"]].agg(["mean", "std"])
-    r = r.merge(base.stack(future_stack=True).unstack(level=[1]).reset_index() if False else
-                pd.DataFrame({"subdivision": base.index,
-                              "annual_mean": base[("rain_annual", "mean")].values, "annual_sd": base[("rain_annual", "std")].values,
-                              "jjas_mean": base[("rain_jjas", "mean")].values, "jjas_sd": base[("rain_jjas", "std")].values}),
-                on="subdivision", how="left")
+    stats = pd.DataFrame({"subdivision": base.index,
+                          "annual_mean": base[("rain_annual", "mean")].values, "annual_sd": base[("rain_annual", "std")].values,
+                          "jjas_mean": base[("rain_jjas", "mean")].values, "jjas_sd": base[("rain_jjas", "std")].values})
+    r = r.merge(stats, on="subdivision", how="left")
     r["rain_annual_anom"] = (r.rain_annual - r.annual_mean) / r.annual_sd
     r["rain_jjas_anom"] = (r.rain_jjas - r.jjas_mean) / r.jjas_sd
     m = pd.read_csv(EXT / "subdivision_to_state.csv")
